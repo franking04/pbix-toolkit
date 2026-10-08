@@ -1,0 +1,1173 @@
+{
+ "textbox": {
+  "n": 177,
+  "roles": {},
+  "objects": {
+   "general": [
+    "paragraphs"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "color",
+    "show",
+    "transparency"
+   ],
+   "border": [
+    "color",
+    "radius",
+    "show"
+   ],
+   "title": [
+    "show"
+   ],
+   "visualHeader": [
+    "show"
+   ]
+  }
+ },
+ "card": {
+  "n": 138,
+  "roles": {
+   "Values": 138
+  },
+  "objects": {
+   "categoryLabels": [
+    "color",
+    "fontSize",
+    "show"
+   ],
+   "labels": [
+    "color",
+    "fontFamily",
+    "fontSize",
+    "labelDisplayUnits",
+    "labelPrecision",
+    "preserveWhitespace"
+   ],
+   "wordWrap": [
+    "show"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "color",
+    "show",
+    "transparency"
+   ],
+   "border": [
+    "color",
+    "radius",
+    "show"
+   ],
+   "visualTooltip": [
+    "section",
+    "show",
+    "transparency",
+    "type"
+   ],
+   "dropShadow": [
+    "angle",
+    "position",
+    "preset",
+    "shadowBlur",
+    "shadowDistance",
+    "shadowSpread",
+    "show",
+    "transparency"
+   ],
+   "title": [
+    "fontColor",
+    "fontSize",
+    "show",
+    "text",
+    "titleWrap"
+   ],
+   "visualHeader": [
+    "border",
+    "show",
+    "transparency"
+   ],
+   "visualHeaderTooltip": [
+    "transparency"
+   ]
+  }
+ },
+ "gauge": {
+  "n": 7,
+  "roles": {
+   "Y": 7
+  },
+  "objects": {
+   "labels": [
+    "fontSize"
+   ],
+   "dataPoint": [
+    "fill",
+    "target"
+   ],
+   "axis": [
+    "target"
+   ],
+   "target": [
+    "show"
+   ]
+  },
+  "vcObjects": {
+   "title": [
+    "alignment",
+    "fontSize",
+    "text"
+   ]
+  }
+ },
+ "image": {
+  "n": 157,
+  "roles": {},
+  "objects": {
+   "general": [
+    "imageUrl"
+   ],
+   "image": [
+    "sourceFile"
+   ]
+  },
+  "vcObjects": {
+   "border": [
+    "color",
+    "show"
+   ],
+   "visualHeader": [
+    "show"
+   ],
+   "visualLink": [
+    "bookmark",
+    "navigationSection",
+    "show",
+    "tooltip",
+    "type"
+   ],
+   "title": [
+    "show"
+   ]
+  }
+ },
+ "slicer": {
+  "n": 170,
+  "roles": {
+   "Values": 203
+  },
+  "objects": {
+   "data": [
+    "endDate",
+    "isInvertedSelectionMode",
+    "mode",
+    "startDate"
+   ],
+   "items": [
+    "fontColor",
+    "textSize"
+   ],
+   "header": [
+    "bold",
+    "fontColor",
+    "outlineStyle",
+    "show",
+    "showRestatement",
+    "text",
+    "textSize"
+   ],
+   "general": [
+    "filter",
+    "orientation",
+    "outlineColor",
+    "selfFilter",
+    "selfFilterEnabled"
+   ],
+   "selection": [
+    "selectAllCheckboxEnabled"
+   ],
+   "dateRange": [
+    "includeToday"
+   ],
+   "date": [
+    "fontColor",
+    "textSize"
+   ],
+   "slider": [
+    "color",
+    "show"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "color",
+    "show",
+    "transparency"
+   ],
+   "title": [
+    "background",
+    "fontColor",
+    "fontSize",
+    "show",
+    "text",
+    "titleWrap"
+   ],
+   "visualTooltip": [
+    "transparency"
+   ],
+   "visualHeader": [
+    "show",
+    "transparency"
+   ],
+   "visualHeaderTooltip": [
+    "transparency"
+   ],
+   "border": [
+    "color",
+    "radius",
+    "show",
+    "width"
+   ]
+  }
+ },
+ "lineChart": {
+  "n": 12,
+  "roles": {
+   "Category": 17,
+   "Y": 15,
+   "Series": 5
+  },
+  "objects": {
+   "dataPoint": [
+    "fill"
+   ],
+   "lineStyles": [
+    "lineChartType",
+    "markerColor",
+    "markerShape",
+    "markerSize",
+    "showMarker",
+    "showSeries",
+    "strokeWidth"
+   ],
+   "labels": [
+    "bold",
+    "color",
+    "fontSize",
+    "labelPosition",
+    "labelPrecision",
+    "show"
+   ],
+   "legend": [
+    "show"
+   ],
+   "categoryAxis": [
+    "axisType",
+    "fontFamily",
+    "fontSize",
+    "gridlineColor",
+    "gridlineShow",
+    "labelColor",
+    "maxMarginFactor",
+    "showAxisTitle"
+   ],
+   "markers": [
+    "transparency"
+   ],
+   "valueAxis": [
+    "fontSize",
+    "gridlineColor",
+    "labelColor",
+    "labelPrecision",
+    "showAxisTitle"
+   ],
+   "y1AxisReferenceLine": [
+    "transparency"
+   ],
+   "trend": [
+    "displayName",
+    "show"
+   ],
+   "forecast": [
+    "bandLineShow",
+    "displayName",
+    "interpolation",
+    "interpolationSmooth",
+    "interpolationSmoothParam",
+    "lineColor",
+    "show",
+    "style",
+    "transform"
+   ]
+  },
+  "vcObjects": {
+   "title": [
+    "fontSize",
+    "show",
+    "text",
+    "titleWrap"
+   ],
+   "border": [
+    "color",
+    "show"
+   ],
+   "background": [
+    "show",
+    "transparency"
+   ],
+   "visualTooltip": [
+    "transparency"
+   ],
+   "visualHeader": [
+    "show",
+    "transparency"
+   ],
+   "visualHeaderTooltip": [
+    "transparency"
+   ]
+  }
+ },
+ "shape": {
+  "n": 10,
+  "roles": {},
+  "objects": {
+   "shape": [
+    "tileShape"
+   ],
+   "rotation": [
+    "angle",
+    "shapeAngle",
+    "textAngle"
+   ],
+   "fill": [
+    "fillColor"
+   ],
+   "outline": [
+    "lineColor",
+    "transparency",
+    "weight"
+   ],
+   "shadow": [
+    "shadowBlur",
+    "show",
+    "transparency"
+   ],
+   "glow": [
+    "shadowBlur",
+    "transparency"
+   ]
+  },
+  "vcObjects": {
+   "border": [
+    "color",
+    "show"
+   ],
+   "background": [
+    "show"
+   ]
+  }
+ },
+ "bookmarkNavigator": {
+  "n": 1,
+  "roles": {},
+  "objects": {
+   "shape": [
+    "parallelogramSlant",
+    "roundEdge",
+    "tabCutCornerSnipSizeTop",
+    "tileShape"
+   ],
+   "layout": [
+    "cellPadding",
+    "columnCount",
+    "orientation",
+    "rowCount"
+   ],
+   "bookmarks": [
+    "allowDeselectionBookmark",
+    "deselectionBookmark",
+    "hideDeselectedBookmark",
+    "selectedBookmark"
+   ],
+   "shadow": [
+    "shadowBlur",
+    "show",
+    "transparency"
+   ],
+   "text": [
+    "bold",
+    "fontColor",
+    "fontSize"
+   ],
+   "glow": [
+    "show"
+   ],
+   "fill": [
+    "fillColor"
+   ]
+  },
+  "vcObjects": {}
+ },
+ "tableEx": {
+  "n": 40,
+  "roles": {
+   "Values": 314
+  },
+  "objects": {
+   "values": [
+    "backColor",
+    "backColorPrimary",
+    "backColorSecondary",
+    "fontColor",
+    "fontColorSecondary",
+    "fontSize",
+    "icon",
+    "wordWrap"
+   ],
+   "grid": [
+    "gridHorizontal",
+    "gridHorizontalColor",
+    "gridVertical",
+    "gridVerticalColor",
+    "outlineColor",
+    "outlineStyle",
+    "rowPadding",
+    "textSize"
+   ],
+   "columnHeaders": [
+    "alignment",
+    "autoSizeColumnWidth",
+    "backColor",
+    "fontColor",
+    "fontFamily",
+    "fontSize",
+    "outline",
+    "outlineColor",
+    "outlineStyle"
+   ],
+   "columnWidth": [
+    "value"
+   ],
+   "columnFormatting": [
+    "alignment",
+    "dataBars",
+    "fontColor",
+    "labelPrecision"
+   ],
+   "total": [
+    "backColor",
+    "fontColor",
+    "fontFamily",
+    "fontSize",
+    "totals"
+   ]
+  },
+  "vcObjects": {
+   "border": [
+    "color",
+    "radius",
+    "show"
+   ],
+   "title": [
+    "background",
+    "fontColor",
+    "fontSize",
+    "heading",
+    "show",
+    "text",
+    "titleWrap"
+   ],
+   "background": [
+    "color",
+    "show",
+    "transparency"
+   ],
+   "visualTooltip": [
+    "transparency"
+   ],
+   "visualHeader": [
+    "show",
+    "transparency"
+   ],
+   "visualHeaderTooltip": [
+    "transparency"
+   ],
+   "stylePreset": [
+    "name"
+   ],
+   "lockAspect": [
+    "show"
+   ]
+  }
+ },
+ "pureVizInfographicC9801BF222134D2D83FA9C41861F3482": {
+  "n": 2,
+  "roles": {
+   "dataset": 21
+  },
+  "objects": {
+   "editpanel": [
+    "show"
+   ],
+   "circle": [
+    "fieldnames",
+    "modifications",
+    "svgCode"
+   ]
+  },
+  "vcObjects": {}
+ },
+ "pivotTable": {
+  "n": 46,
+  "roles": {
+   "Rows": 95,
+   "Values": 275,
+   "Columns": 38
+  },
+  "objects": {
+   "grid": [
+    "gridHorizontal",
+    "gridHorizontalColor",
+    "gridHorizontalWeight",
+    "gridVertical",
+    "gridVerticalColor",
+    "gridVerticalWeight",
+    "imageHeight",
+    "outlineColor",
+    "rowPadding",
+    "textSize"
+   ],
+   "columnHeaders": [
+    "alignment",
+    "autoSizeColumnWidth",
+    "backColor",
+    "fontColor",
+    "fontFamily",
+    "fontSize",
+    "outline",
+    "titleAlignment",
+    "wordWrap"
+   ],
+   "values": [
+    "backColor",
+    "backColorPrimary",
+    "backColorSecondary",
+    "fontColor",
+    "fontSize",
+    "icon",
+    "valuesOnRow"
+   ],
+   "columnWidth": [
+    "value"
+   ],
+   "rowHeaders": [
+    "alignment",
+    "backColor",
+    "expandCollapseButtonsSize",
+    "fontColor",
+    "fontSize",
+    "outline",
+    "showExpandCollapseButtons",
+    "steppedLayoutIndentation",
+    "wordWrap"
+   ],
+   "subTotals": [
+    "applyToHeaders",
+    "backColor",
+    "columnSubtotals",
+    "columnSubtotalsLabel",
+    "fontSize",
+    "levelSubtotalEnabled",
+    "levelSubtotalLabel",
+    "perColumnLevel",
+    "perRowLevel",
+    "rowSubtotals"
+   ],
+   "columnFormatting": [
+    "alignment",
+    "backColor",
+    "dataBars",
+    "fontColor",
+    "labelPrecision",
+    "styleHeader",
+    "styleSubtotals",
+    "styleTotal",
+    "styleValues"
+   ],
+   "blankRows": [
+    "showBlankRows"
+   ],
+   "columnTotal": [
+    "applyToHeaders",
+    "backColor",
+    "fontColor",
+    "fontSize"
+   ],
+   "rowTotal": [
+    "applyToHeaders",
+    "backColor",
+    "fontColor",
+    "fontSize"
+   ],
+   "general": [
+    "layout"
+   ],
+   "total": []
+  },
+  "vcObjects": {
+   "stylePreset": [
+    "name"
+   ],
+   "background": [
+    "color",
+    "show",
+    "transparency"
+   ],
+   "lockAspect": [
+    "show"
+   ],
+   "title": [
+    "fontSize",
+    "show",
+    "text",
+    "titleWrap"
+   ],
+   "visualTooltip": [
+    "transparency"
+   ],
+   "visualHeader": [
+    "show",
+    "transparency"
+   ],
+   "visualHeaderTooltip": [
+    "transparency"
+   ],
+   "border": [
+    "color",
+    "show"
+   ],
+   "general": [
+    "keepLayerOrder"
+   ]
+  }
+ },
+ "basicShape": {
+  "n": 31,
+  "roles": {},
+  "objects": {
+   "general": [
+    "shapeType"
+   ],
+   "fill": [
+    "fillColor",
+    "transparency"
+   ],
+   "line": [
+    "lineColor",
+    "weight"
+   ]
+  },
+  "vcObjects": {
+   "title": [
+    "show"
+   ],
+   "background": [
+    "show"
+   ],
+   "border": [
+    "show"
+   ],
+   "visualHeader": [
+    "show"
+   ]
+  }
+ },
+ "lineClusteredColumnComboChart": {
+  "n": 2,
+  "roles": {
+   "Category": 4,
+   "Y": 3,
+   "Y2": 1
+  },
+  "objects": {
+   "labels": [
+    "backgroundColor",
+    "bold",
+    "color",
+    "enableBackground",
+    "fontSize",
+    "labelPosition",
+    "labelPrecision",
+    "show",
+    "showAll"
+   ],
+   "dataPoint": [
+    "fill"
+   ],
+   "categoryAxis": [
+    "axisType",
+    "concatenateLabels",
+    "fontSize",
+    "labelColor",
+    "maxMarginFactor",
+    "show",
+    "showAxisTitle"
+   ],
+   "legend": [
+    "show"
+   ],
+   "valueAxis": [
+    "bold",
+    "fontSize",
+    "labelColor",
+    "show",
+    "showAxisTitle"
+   ],
+   "lineStyles": [
+    "areaShow",
+    "showMarker",
+    "strokeWidth"
+   ],
+   "zoom": [
+    "categoryMax",
+    "categorySize",
+    "show"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "show"
+   ]
+  }
+ },
+ "multiRowCard": {
+  "n": 15,
+  "roles": {
+   "Values": 31
+  },
+  "objects": {
+   "card": [
+    "barColor",
+    "barShow",
+    "barWeight",
+    "cardPadding",
+    "outlineColor",
+    "outlineStyle",
+    "outlineWeight"
+   ],
+   "dataLabels": [
+    "color",
+    "fontFamily",
+    "fontSize"
+   ],
+   "categoryLabels": [
+    "fontSize",
+    "show"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "show"
+   ],
+   "border": [
+    "show"
+   ],
+   "lockAspect": [
+    "show"
+   ],
+   "padding": [
+    "bottom"
+   ],
+   "title": [
+    "show"
+   ],
+   "visualHeader": [
+    "show"
+   ]
+  }
+ },
+ "actionButton": {
+  "n": 33,
+  "roles": {},
+  "objects": {
+   "icon": [
+    "horizontalAlignment",
+    "lineColor",
+    "lineTransparency",
+    "shapeType"
+   ],
+   "fill": [
+    "fillColor",
+    "image",
+    "show",
+    "transparency"
+   ],
+   "text": [
+    "bold",
+    "fontColor",
+    "fontSize",
+    "horizontalAlignment",
+    "show",
+    "text",
+    "verticalAlignment"
+   ]
+  },
+  "vcObjects": {
+   "visualLink": [
+    "bookmark",
+    "show",
+    "tooltip",
+    "type"
+   ]
+  }
+ },
+ "columnChart": {
+  "n": 2,
+  "roles": {
+   "Category": 2,
+   "Y": 4
+  },
+  "objects": {
+   "labels": [
+    "backgroundColor",
+    "bold",
+    "color",
+    "enableBackground",
+    "fontSize",
+    "labelOverflow",
+    "labelPosition",
+    "show"
+   ],
+   "dataPoint": [
+    "fill"
+   ],
+   "categoryAxis": [
+    "bold",
+    "concatenateLabels",
+    "fontSize",
+    "innerPadding",
+    "labelColor",
+    "maxMarginFactor",
+    "preferredCategoryWidth",
+    "show",
+    "showAxisTitle"
+   ],
+   "legend": [
+    "bold",
+    "fontSize",
+    "position",
+    "show",
+    "showGradientLegend",
+    "showTitle",
+    "underline"
+   ],
+   "valueAxis": [
+    "fontSize",
+    "gridlineShow",
+    "show",
+    "showAxisTitle"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "show"
+   ],
+   "title": [
+    "alignment",
+    "background",
+    "fontColor",
+    "fontSize",
+    "heading",
+    "show",
+    "text"
+   ],
+   "visualTooltip": [
+    "show"
+   ],
+   "general": [
+    "keepLayerOrder"
+   ]
+  }
+ },
+ "clusteredColumnChart": {
+  "n": 9,
+  "roles": {
+   "Category": 13,
+   "Y": 11
+  },
+  "objects": {
+   "categoryAxis": [
+    "axisType",
+    "concatenateLabels",
+    "fontSize",
+    "innerPadding",
+    "italic",
+    "labelColor",
+    "maxMarginFactor",
+    "preferredCategoryWidth",
+    "show",
+    "showAxisTitle"
+   ],
+   "labels": [
+    "color",
+    "enableBackground",
+    "fontFamily",
+    "fontSize",
+    "labelDisplayUnits",
+    "labelPosition",
+    "labelPrecision",
+    "show"
+   ],
+   "dataPoint": [
+    "fill"
+   ],
+   "legend": [
+    "position",
+    "show",
+    "showGradientLegend"
+   ],
+   "zoom": [
+    "show"
+   ],
+   "valueAxis": [
+    "gridlineColor",
+    "gridlineShow",
+    "show",
+    "showAxisTitle",
+    "start"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "show"
+   ],
+   "title": [
+    "show",
+    "text"
+   ],
+   "visualTooltip": [
+    "show"
+   ],
+   "visualHeader": [
+    "show"
+   ],
+   "border": [
+    "show"
+   ]
+  }
+ },
+ "pieChart": {
+  "n": 2,
+  "roles": {
+   "Category": 2,
+   "Y": 2
+  },
+  "objects": {
+   "legend": [
+    "position",
+    "show"
+   ]
+  },
+  "vcObjects": {
+   "title": [
+    "alignment",
+    "fontSize",
+    "show",
+    "text"
+   ],
+   "background": [
+    "show"
+   ]
+  }
+ },
+ "scatterChart": {
+  "n": 1,
+  "roles": {
+   "X": 1,
+   "Category": 5,
+   "Size": 1,
+   "Play": 1,
+   "Series": 1,
+   "Y": 1
+  },
+  "objects": {
+   "categoryLabels": [
+    "show"
+   ],
+   "colorBorder": [
+    "show"
+   ],
+   "categoryAxis": [
+    "fontSize",
+    "labelDisplayUnits",
+    "labelPrecision",
+    "start",
+    "treatNullsAsZero"
+   ],
+   "valueAxis": [
+    "labelDisplayUnits",
+    "labelPrecision"
+   ],
+   "colorByCategory": [
+    "show"
+   ]
+  },
+  "vcObjects": {
+   "stylePreset": [
+    "name"
+   ],
+   "background": [
+    "color",
+    "show"
+   ],
+   "lockAspect": [
+    "show"
+   ],
+   "title": [
+    "show",
+    "text"
+   ],
+   "general": [
+    "keepLayerOrder"
+   ]
+  }
+ },
+ "clusteredBarChart": {
+  "n": 3,
+  "roles": {
+   "Category": 5,
+   "Y": 3
+  },
+  "objects": {
+   "legend": [
+    "show"
+   ],
+   "zoom": [
+    "show"
+   ],
+   "labels": [
+    "backgroundTransparency",
+    "color",
+    "enableBackground",
+    "fontSize",
+    "labelPosition",
+    "show"
+   ],
+   "y1AxisReferenceLine": [
+    "dataLabelShow",
+    "displayName",
+    "lineColor",
+    "show",
+    "style",
+    "transparency",
+    "value"
+   ],
+   "valueAxis": [
+    "show",
+    "showAxisTitle",
+    "start"
+   ],
+   "categoryAxis": [
+    "concatenateLabels",
+    "fontSize",
+    "innerPadding",
+    "maxMarginFactor",
+    "show",
+    "showAxisTitle"
+   ],
+   "dataPoint": [
+    "fill"
+   ]
+  },
+  "vcObjects": {
+   "stylePreset": [
+    "name"
+   ],
+   "background": [
+    "show"
+   ],
+   "lockAspect": [
+    "show"
+   ],
+   "title": [
+    "show",
+    "text"
+   ],
+   "general": [
+    "keepLayerOrder"
+   ]
+  }
+ },
+ "advancedSlicerVisual": {
+  "n": 7,
+  "roles": {
+   "Values": 7,
+   "Label": 7,
+   "Tooltips": 7
+  },
+  "objects": {
+   "layout": [
+    "borderColor",
+    "borderWidth",
+    "customizeLines",
+    "fixedHeight",
+    "gridlineColor",
+    "gridlineWidth",
+    "lineColor",
+    "maxTiles",
+    "orientation",
+    "showFixedSize",
+    "style"
+   ],
+   "overFlow": [
+    "overFlowDirection"
+   ],
+   "selection": [
+    "strictSingleSelect"
+   ],
+   "general": [
+    "filter"
+   ],
+   "image": [
+    "padding",
+    "position"
+   ],
+   "selectionIcon": [
+    "show",
+    "spacing"
+   ],
+   "accentBar": [
+    "color",
+    "position",
+    "show",
+    "width"
+   ]
+  },
+  "vcObjects": {
+   "background": [
+    "color",
+    "transparency"
+   ],
+   "border": [
+    "color",
+    "radius",
+    "show"
+   ],
+   "title": [
+    "alignment",
+    "background",
+    "fontColor",
+    "text"
+   ]
+  }
+ },
+ "htmlContent443BE3AD55E043BF878BED274D3A6855": {
+  "n": 7,
+  "roles": {
+   "content": 7
+  },
+  "objects": {},
+  "vcObjects": {}
+ }
+}

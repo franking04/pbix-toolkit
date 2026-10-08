@@ -1,0 +1,144 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "data": {
+  "name": "dataset"
+ },
+ "width": "container",
+ "height": "container",
+ "config": {
+  "background": "transparent",
+  "customFormatTypes": true,
+  "view": {
+   "stroke": null
+  },
+  "font": "Segoe UI",
+  "axis": {
+   "labelColor": "#55617A",
+   "labelFontSize": 12,
+   "labelFont": "Segoe UI",
+   "title": null,
+   "domain": false,
+   "ticks": false,
+   "labelPadding": 6,
+   "gridColor": "#DCE2EE",
+   "gridOpacity": 0.6
+  },
+  "axisX": {
+   "grid": false,
+   "labelAngle": 0
+  },
+  "legend": {
+   "disable": true
+  },
+  "text": {
+   "font": "Segoe UI",
+   "fontSize": 12,
+   "color": "#0F172A"
+  },
+  "padding": 4
+ },
+ "transform": [
+  {
+   "calculate": "max(datum['Anterior'],datum['Actual'])",
+   "as": "_mx"
+  }
+ ],
+ "encoding": {
+  "y": {
+   "field": "Categoría",
+   "type": "nominal",
+   "sort": {
+    "field": "Actual",
+    "op": "max",
+    "order": "descending"
+   },
+   "axis": {
+    "labelColor": "#3B4660",
+    "grid": true,
+    "gridDash": [
+     2,
+     3
+    ]
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 3,
+    "color": "#CBD2E0"
+   },
+   "encoding": {
+    "x": {
+     "field": "Anterior",
+     "type": "quantitative",
+     "axis": {
+      "format": "#,0",
+      "formatType": "pbiFormat",
+      "tickCount": 4
+     }
+    },
+    "x2": {
+     "field": "Actual"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 80,
+    "color": "#8A94AA",
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "Anterior",
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 110,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "Actual",
+     "type": "quantitative"
+    },
+    "color": {
+     "condition": {
+      "test": "datum['Actual'] >= datum['Anterior']",
+      "value": "#146C36"
+     },
+     "value": "#B42318"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontWeight": 600,
+    "color": "#0F172A"
+   },
+   "encoding": {
+    "x": {
+     "field": "_mx",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "Actual",
+     "format": "#,0",
+     "formatType": "pbiFormat"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "data": {
+  "name": "dataset"
+ },
+ "width": "container",
+ "height": "container",
+ "config": {
+  "background": "transparent",
+  "customFormatTypes": true,
+  "view": {
+   "stroke": null
+  },
+  "font": "Segoe UI",
+  "axis": {
+   "labelColor": "#A3AEC8",
+   "labelFontSize": 12,
+   "labelFont": "Segoe UI",
+   "title": null,
+   "domain": false,
+   "ticks": false,
+   "labelPadding": 6,
+   "gridColor": "#26314F",
+   "gridOpacity": 0.6
+  },
+  "axisX": {
+   "grid": false,
+   "labelAngle": 0
+  },
+  "legend": {
+   "disable": true
+  },
+  "text": {
+   "font": "Segoe UI",
+   "fontSize": 12,
+   "color": "#EEF2FB"
+  },
+  "padding": 4
+ },
+ "encoding": {
+  "x": {
+   "field": "Mes",
+   "type": "ordinal",
+   "sort": {
+    "field": "Orden",
+    "op": "min"
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "area",
+    "color": {
+     "gradient": "linear",
+     "x1": 1,
+     "y1": 1,
+     "x2": 1,
+     "y2": 0,
+     "stops": [
+      {
+       "offset": 0,
+       "color": "rgba(92,200,255,0)"
+      },
+      {
+       "offset": 1,
+       "color": "rgba(92,200,255,0.42)"
+      }
+     ]
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "Valor",
+     "type": "quantitative",
+     "axis": {
+      "format": "$#,0",
+      "formatType": "pbiFormat",
+      "tickCount": 4
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "line",
+    "color": "#6E7A96",
+    "strokeWidth": 1.5
+   },
+   "encoding": {
+    "y": {
+     "field": "Comparación",
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "line",
+    "color": "#5CC8FF",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "y": {
+     "field": "Valor",
+     "type": "quantitative"
+    },
+    "tooltip": [
+     {
+      "field": "Mes"
+     },
+     {
+      "field": "Valor",
+      "format": "$#,0.0",
+      "formatType": "pbiFormat"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "joinaggregate": [
+      {
+       "op": "max",
+       "field": "Orden",
+       "as": "_ult"
+      }
+     ]
+    },
+    {
+     "filter": "datum['Orden'] == datum._ult"
+    }
+   ],
+   "layer": [
+    {
+     "mark": {
+      "type": "point",
+      "filled": true,
+      "size": 70,
+      "color": "#5CC8FF",
+      "opacity": 1
+     },
+     "encoding": {
+      "y": {
+       "field": "Valor",
+       "type": "quantitative"
+      }
+     }
+    },
+    {
+     "mark": {
+      "type": "text",
+      "align": "left",
+      "dx": 9,
+      "fontWeight": 600,
+      "color": "#EEF2FB"
+     },
+     "encoding": {
+      "y": {
+       "field": "Valor",
+       "type": "quantitative"
+      },
+      "text": {
+       "field": "Valor",
+       "format": "$#,0.0",
+       "formatType": "pbiFormat"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

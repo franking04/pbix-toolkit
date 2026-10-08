@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=1328"><title>Detalle · referencia</title>
+<style>
+:root{--pagina:#FFFFFF;--superficie:#FFFFFF;--linea:#E3E3E0;--tinta:#111111;--tinta2:#4A4A4A;--tinta3:#6A6A6A;--acento:#3B3A9E;--acento_suave:#ECECF7;--contexto:#8C8C8C;--contexto_suave:#D2D2D2;--bien:#14794F;--alerta:#A34F00;--mal:#C0281C;--acento2:#3B3A9E;--bien_suave:#E8F2ED;--mal_suave:#F9EAE8;--alerta_suave:#F6EDE6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#C9CED6;font-family:"Segoe UI", "Segoe UI", Arial, sans-serif;color:var(--tinta)}
+.canvas{position:relative;width:1280px;height:720px;margin:24px auto 0;background:var(--pagina);overflow:hidden}
+.b{position:absolute}
+.card{position:absolute;background:transparent;border:0;border-top:1px solid var(--linea);border-radius:0}
+.kick{font-family:"Segoe UI Semibold", "Segoe UI", Arial, sans-serif;font-weight:600;font-size:12.0px;color:var(--tinta2)}
+.tit{font-family:"Segoe UI Semibold", "Segoe UI", Arial, sans-serif;font-weight:600;font-size:20.0px;color:var(--tinta)}
+.sub{font-size:12.0px;color:var(--tinta3)}
+.vt{font-weight:600;font-size:13.33px;color:var(--tinta)}
+.vs{font-size:12.0px;color:var(--tinta3);margin-top:2px}
+.lab{font-size:12.0px;color:var(--tinta2)}
+.kpi{font-family:"Segoe UI Light", "Segoe UI", Arial, sans-serif;font-weight:300;font-size:28.0px;font-variant-numeric:tabular-nums;color:var(--tinta)}
+.heroe{font-family:"Segoe UI Light", "Segoe UI", Arial, sans-serif;font-weight:300;font-size:36.0px;font-variant-numeric:tabular-nums;color:var(--tinta)}
+.ctx{font-size:12.0px;color:var(--tinta3)}
+.impacto{font-family:"Segoe UI Light", "Segoe UI", Arial, sans-serif;font-weight:600;font-size:48.0px;font-variant-numeric:tabular-nums;color:var(--tinta)}
+.sombra{box-shadow:0 1px 2px rgba(16,24,40,.06),0 6px 16px rgba(16,24,40,.08)}
+.acb{border-left:3px solid var(--acento)!important}
+.tabs{position:absolute;display:flex;gap:4px;padding:3px;border-radius:8px;background:var(--acento_suave)}
+.tab{font-size:12.0px;padding:6px 14px;border-radius:6px;color:var(--tinta2)} .tab.on{background:var(--superficie);color:var(--tinta);font-weight:600;box-shadow:0 1px 2px rgba(16,24,40,.12)}
+.up{color:var(--bien);font-weight:600} .dn{color:var(--mal);font-weight:600} .wr{color:var(--alerta);font-weight:600} .nt{color:var(--tinta2);font-weight:600}
+.sl{position:absolute;height:32px;background:var(--superficie);border:1px solid var(--linea);border-radius:6px;font-size:12.0px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:var(--tinta)}
+.sl .k{color:var(--tinta3);margin-right:6px}
+.sl:after{content:"";width:6px;height:6px;border-right:1.5px solid var(--tinta3);border-bottom:1.5px solid var(--tinta3);transform:rotate(45deg);margin:-3px 0 0 8px}
+.vr{position:absolute;width:1px;background:var(--linea)} .hr{position:absolute;height:1px;background:var(--linea)}
+table{border-collapse:collapse;width:100%;font-size:12.0px;font-variant-numeric:tabular-nums}
+th{font-weight:600;color:var(--tinta2);text-align:left;padding:7px 8px;line-height:1.3;border-bottom:1px solid var(--tinta3);white-space:nowrap}
+td{padding:6px 8px;line-height:1.3;white-space:nowrap;border-bottom:1px solid var(--linea)}
+th.n,td.n{text-align:right}
+tr.tot td{font-weight:600;border-top:1px solid var(--tinta3);border-bottom:0} tr.sub td{font-weight:600}
+.pie{position:absolute;left:24px;right:24px;bottom:10px;font-size:12.0px;color:var(--tinta3);display:flex;justify-content:space-between}
+.pie b{font-weight:600;color:var(--tinta2)}
+.leg{display:flex;gap:14px;font-size:12.0px;color:var(--tinta2);align-items:center}
+.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.capa-fondo{position:absolute;inset:0;background:transparent;overflow:hidden}
+.luz{position:absolute;border-radius:50%;filter:blur(70px)}
+.trazo{position:absolute;height:1px;background:linear-gradient(90deg,transparent,var(--acento),transparent);opacity:.55}
+.pill{display:inline-block;padding:2px 8px;border-radius:10px;font-weight:600;line-height:1.3}
+.pill.up{background:var(--bien_suave)} .pill.dn{background:var(--mal_suave)} .pill.wr{background:var(--alerta_suave)}
+.map [data-pbi]{outline:1.5px dashed #D92D20;outline-offset:-1px}
+.map [data-pbi]:before{content:attr(data-pbi);position:absolute;right:2px;top:-15px;font:600 9.5px Consolas,monospace;color:#fff;background:#D92D20;padding:1px 4px;border-radius:3px;z-index:9;white-space:nowrap}
+.ficha{width:1280px;margin:16px auto 32px;background:#fff;border:1px solid #D0D5DD;border-radius:8px;padding:16px 20px;font:13px "Segoe UI",Arial,sans-serif;color:#1d2433}
+.ficha h2{font-size:14px;margin-bottom:8px} .ficha td,.ficha th{font-size:12px;padding:4px 8px;border-bottom:1px solid #EEF0F3;white-space:normal;vertical-align:top}
+.toggle{position:fixed;right:16px;top:12px;font:12px "Segoe UI",sans-serif;background:#101828;color:#fff;border:0;border-radius:6px;padding:6px 10px;cursor:pointer}
+</style></head><body>
+<button class="toggle" onclick="document.body.classList.toggle('map')">Mapa Power BI (m)</button>
+<div class="canvas">
+<div class="b kick" style="left:24px;top:24px" data-pbi="textbox">Inventario · detalle</div>
+<div class="b tit" style="left:24px;top:42px" data-pbi="card de texto (producto y periodo seleccionados)">Inventario — 90118 Clásico 1L · septiembre 2026</div>
+<div class="b sub" style="left:24px;top:72px" data-pbi="textbox">Cada fila es un movimiento · cantidades en unidades, valores en USD</div>
+<div class="sl" style="left:24px;top:104px;width:232px" data-pbi="slicer Between (fecha)"><span><span class="k">Fecha</span>01/09/2026 – 30/09/2026</span></div>
+<div class="sl" style="left:264px;top:104px;width:264px" data-pbi="slicer Dropdown con búsqueda"><span><span class="k">Producto</span>90118 · Clásico 1L</span></div>
+<div class="sl" style="left:536px;top:104px;width:168px" data-pbi="slicer Dropdown"><span><span class="k">Bodega</span>Centro</span></div>
+<div class="b" style="left:728px;top:106px;display:flex;gap:6px" data-pbi="advancedSlicerVisual (botones; seleccionado = acento)"><span style="font-size:12px;padding:6px 11px;border-radius:6px;border:1px solid var(--acento);background:var(--acento);color:#fff">Todos</span><span style="font-size:12px;padding:6px 11px;border-radius:6px;border:1px solid var(--linea);background:transparent;color:var(--tinta2)">Compra</span><span style="font-size:12px;padding:6px 11px;border-radius:6px;border:1px solid var(--linea);background:transparent;color:var(--tinta2)">Venta</span><span style="font-size:12px;padding:6px 11px;border-radius:6px;border:1px solid var(--linea);background:transparent;color:var(--tinta2)">Nota de crédito</span><span style="font-size:12px;padding:6px 11px;border-radius:6px;border:1px solid var(--linea);background:transparent;color:var(--tinta2)">Ajuste</span></div>
+<div class="hr" style="left:24px;top:148px;width:1232px"></div>
+<div class="b" style="left:24px;top:160px" data-pbi="card (valor) + textbox (etiqueta y contexto), sin caja"><div class="lab">Saldo inicial <span class="ctx">und.</span></div><div class="kpi" style="font-size:24px;margin-top:2px">2,220</div><div class="ctx" style="margin-top:2px">01/09/2026</div></div><div class="b" style="left:272px;top:160px" data-pbi="card (valor) + textbox (etiqueta y contexto), sin caja"><div class="lab">Entradas <span class="ctx">und.</span></div><div class="kpi" style="font-size:24px;margin-top:2px">+3,018</div><div class="ctx" style="margin-top:2px">3 compras · 1 nota de crédito</div></div><div class="b" style="left:520px;top:160px" data-pbi="card (valor) + textbox (etiqueta y contexto), sin caja"><div class="lab">Salidas <span class="ctx">und.</span></div><div class="kpi" style="font-size:24px;margin-top:2px">−2,242</div><div class="ctx" style="margin-top:2px">6 ventas · 1 ajuste</div></div><div class="b" style="left:768px;top:160px" data-pbi="card (valor) + textbox (etiqueta y contexto), sin caja"><div class="lab">Saldo final <span class="ctx">und.</span></div><div class="kpi" style="font-size:24px;margin-top:2px">2,996</div><div class="ctx" style="margin-top:2px">valorizado $18,485.92</div></div>
+<div class="hr" style="left:24px;top:232px;width:1232px"></div>
+<div class="b" style="left:24px;top:240px;width:1232px" data-pbi="tableEx: anchos fijos, displayName legibles, números a la derecha, signo −, totales con regla; fechas dd/mm/yyyy">
+ <table><tr><th>Fecha</th><th>Movimiento</th><th>Documento</th><th class="n">Entrada</th><th class="n">Salida</th><th class="n">Costo unit. ($)</th><th class="n">Valor mov. ($)</th><th class="n">Saldo (und.)</th><th class="n">Saldo valorizado ($)</th></tr>
+ <tr><td>02/09/2026</td><td>Compra</td><td style="color:var(--tinta2)">OC-24518</td><td class="n">1,200</td><td class="n"></td><td class="n" style="color:var(--tinta2)">6.12</td><td class="n">7,344.00</td><td class="n" style="font-weight:600">3,420</td><td class="n">20,931.40</td></tr><tr><td>03/09/2026</td><td>Venta</td><td style="color:var(--tinta2)">FA-88213</td><td class="n"></td><td class="n">−310</td><td class="n" style="color:var(--tinta2)">6.12</td><td class="n">−1,897.20</td><td class="n" style="font-weight:600">3,110</td><td class="n">19,034.20</td></tr><tr><td>05/09/2026</td><td>Venta</td><td style="color:var(--tinta2)">FA-88340</td><td class="n"></td><td class="n">−245</td><td class="n" style="color:var(--tinta2)">6.12</td><td class="n">−1,499.40</td><td class="n" style="font-weight:600">2,865</td><td class="n">17,534.80</td></tr><tr><td>08/09/2026</td><td>Nota de crédito</td><td style="color:var(--tinta2)">NC-1031</td><td class="n">18</td><td class="n"></td><td class="n" style="color:var(--tinta2)">6.12</td><td class="n">110.16</td><td class="n" style="font-weight:600">2,883</td><td class="n">17,644.96</td></tr><tr><td>11/09/2026</td><td>Compra</td><td style="color:var(--tinta2)">OC-24602</td><td class="n">800</td><td class="n"></td><td class="n" style="color:var(--tinta2)">6.20</td><td class="n">4,960.00</td><td class="n" style="font-weight:600">3,683</td><td class="n">22,604.96</td></tr><tr><td>12/09/2026</td><td>Venta</td><td style="color:var(--tinta2)">FA-88702</td><td class="n"></td><td class="n">−420</td><td class="n" style="color:var(--tinta2)">6.14</td><td class="n">−2,578.80</td><td class="n" style="font-weight:600">3,263</td><td class="n">20,026.16</td></tr><tr><td>16/09/2026</td><td>Venta</td><td style="color:var(--tinta2)">FA-88911</td><td class="n"></td><td class="n">−388</td><td class="n" style="color:var(--tinta2)">6.14</td><td class="n">−2,382.32</td><td class="n" style="font-weight:600">2,875</td><td class="n">17,643.84</td></tr><tr><td>19/09/2026</td><td>Ajuste</td><td style="color:var(--tinta2)">AJ-0207</td><td class="n"></td><td class="n">−12</td><td class="n" style="color:var(--tinta2)">6.14</td><td class="n">−73.68</td><td class="n" style="font-weight:600">2,863</td><td class="n">17,570.16</td></tr><tr><td>23/09/2026</td><td>Venta</td><td style="color:var(--tinta2)">FA-89150</td><td class="n"></td><td class="n">−505</td><td class="n" style="color:var(--tinta2)">6.14</td><td class="n">−3,100.70</td><td class="n" style="font-weight:600">2,358</td><td class="n">14,469.46</td></tr><tr><td>26/09/2026</td><td>Compra</td><td style="color:var(--tinta2)">OC-24771</td><td class="n">1,000</td><td class="n"></td><td class="n" style="color:var(--tinta2)">6.25</td><td class="n">6,250.00</td><td class="n" style="font-weight:600">3,358</td><td class="n">20,719.46</td></tr><tr><td>29/09/2026</td><td>Venta</td><td style="color:var(--tinta2)">FA-89402</td><td class="n"></td><td class="n">−362</td><td class="n" style="color:var(--tinta2)">6.17</td><td class="n">−2,233.54</td><td class="n" style="font-weight:600">2,996</td><td class="n">18,485.92</td></tr><tr class="tot"><td>Total</td><td></td><td></td><td class="n">3,018</td><td class="n">−2,242</td><td></td><td class="n">4,972.52</td><td class="n">2,996</td><td class="n">18,485.92</td></tr></table></div>
+<div class="pie" data-pbi="textbox (fuente) + card de texto (medida Actualizado) + actionButton ⓘ → tooltip/página de definiciones"><span>Fuente: <b>ERP Inventario (FactMovimientos)</b> · Actualizado al <b>06/10/2026 07:30</b></span><span>Exportar: solo datos resumidos en Report Server</span></div></div>
+<div class="ficha"><h2>Ficha de decisiones (fuera del lienzo; no se replica en Power BI)</h2><table><tr><th style="width:190px">Dirección</th><td>suizo · analítico y detalle densos, suites de varias páginas</td></tr><tr><th style="width:190px">Tipo / público</th><td>Detalle · analistas y operación que consultan registros y concilian saldos</td></tr><tr><th style="width:190px">Premisa</th><td>El usuario verifica movimientos uno a uno, porque concilia contra documentos; por eso la tabla es protagonista, con saldo inicial/final arriba y columnas legibles.</td></tr><tr><th style="width:190px">Pregunta de 5 s</th><td>¿Cuadra el saldo? → inicial 2,220 + 3,018 − 2,242 = 2,996</td></tr><tr><th style="width:190px">Rejilla</th><td>12 col; sin tarjetas; filtros en una fila; resumen en línea; tabla a ancho completo</td></tr><tr><th style="width:190px">Escala</th><td>tabla 9 pt; resumen 18 pt (sin caja); título 15 pt</td></tr><tr><th style="width:190px">Supuestos</th><td>Unidad en el encabezado de columna, no en cada celda. SKU fuera de la tabla porque ya está filtrado.</td></tr></table></div>
+<script>
+const C=n=>getComputedStyle(document.documentElement).getPropertyValue('--'+n).trim();
+const NS='http://www.w3.org/2000/svg';const FS=12;
+const fmt=(v,d=0)=>v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fK=v=>(v<0?'−':'')+'$'+fmt(Math.abs(v))+'K';
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function tx(p,x,y,s,a={}){const t=el('text',Object.assign({x,y,'font-size':FS,fill:C('tinta3')},a),p);t.textContent=s;return t}
+function svg(id){const h=document.getElementById(id);const s=el('svg',{width:h.clientWidth,height:h.clientHeight},h);return [s,h.clientWidth,h.clientHeight]}
+function nice(m){const p=Math.pow(10,Math.floor(Math.log10(m)));return [1,2,2.5,5,10].find(k=>k*p>=m/4)*p}
+function yax(s,x0,x1,y0,y1,max,f){const st=nice(max),top=Math.ceil(max/st)*st;for(let v=0;v<=top+1e-9;v+=st){const y=y1-(v/top)*(y1-y0);el('line',{x1:x0,x2:x1,y1:y,y2:y,stroke:C('linea')},s);tx(s,x0-6,y+4,f(v),{'text-anchor':'end'})}return top}
+function linea(id,lab,ser,o={}){const [s,w,h]=svg(id);const L=52,R=o.R||100,T=12,B=24,f=o.f||fK;const top=yax(s,L,w-R,T,h-B,Math.max(...ser.flatMap(x=>x.v)),f);
+ const X=i=>L+i*(w-L-R)/(lab.length-1),Y=v=>h-B-(v/top)*(h-B-T);lab.forEach((l,i)=>tx(s,X(i),h-6,l,{'text-anchor':'middle'}));
+ const defs=el('defs',{},s),fin=[];
+ ser.forEach((se,k)=>{if(se.area){const g=el('linearGradient',{id:id+'g'+k,x1:0,y1:0,x2:0,y2:1},defs);el('stop',{offset:'0%','stop-color':se.c,'stop-opacity':se.area},g);el('stop',{offset:'100%','stop-color':se.c,'stop-opacity':0},g);
+  el('path',{d:`M${X(0)},${h-B} `+se.v.map((v,i)=>`L${X(i)},${Y(v)}`).join(' ')+` L${X(se.v.length-1)},${h-B}Z`,fill:`url(#${id}g${k})`},s)}
+  el('polyline',{points:se.v.map((v,i)=>X(i)+','+Y(v)).join(' '),fill:'none',stroke:se.c,'stroke-width':2,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':se.dash||''},s);
+  const li=se.v.length-1;el('circle',{cx:X(li),cy:Y(se.v[li]),r:4,fill:se.c,stroke:C('superficie'),'stroke-width':2},s);
+  fin.push({y:Y(se.v[li])+4,x:X(li)+8,t:se.n+' '+f(se.v[li]),c:se.lc||C('tinta')})});
+ fin.sort((a,b)=>a.y-b.y);for(let i=1;i<fin.length;i++)if(fin[i].y-fin[i-1].y<15)fin[i].y=fin[i-1].y+15;
+ fin.forEach(e=>{if(e.t.trim())tx(s,e.x,e.y,e.t,{fill:e.c,'font-weight':600})})}
+function barras(id,lab,v,o={}){const [s,w,h]=svg(id);const L=o.L||132,R=64,n=v.length,band=h/n,bh=Math.min(16,band*.55),mx=Math.max(...v),f=o.f||fK;
+ v.forEach((x,i)=>{const y=band*i+(band-bh)/2,ww=Math.max(2,(x/mx)*(w-L-R));tx(s,L-8,y+bh/2+4,lab[i],{'text-anchor':'end',fill:C('tinta2')});
+  el('path',{d:`M${L},${y}H${L+ww-4}Q${L+ww},${y} ${L+ww},${y+4}V${y+bh-4}Q${L+ww},${y+bh} ${L+ww-4},${y+bh}H${L}Z`,fill:(o.hi!=null&&i!==o.hi)?C('contexto_suave'):C('acento')},s);
+  tx(s,L+ww+6,y+bh/2+4,f(x),{fill:C('tinta'),'font-weight':600})})}
+function columnas(id,lab,v,o={}){const [s,w,h]=svg(id);const L=44,R=8,T=18,B=22,f=o.f||(x=>fmt(x));const top=yax(s,L,w-R,T,h-B,Math.max(...v),f);
+ const n=v.length,band=(w-L-R)/n,bw=Math.min(24,band*.6);v.forEach((x,i)=>{const X=L+band*i+(band-bw)/2,y=h-B-(x/top)*(h-B-T),hh=h-B-y,r=Math.min(4,hh);
+  el('path',{d:`M${X},${h-B}V${y+r}Q${X},${y} ${X+r},${y}H${X+bw-r}Q${X+bw},${y} ${X+bw},${y+r}V${h-B}Z`,fill:(o.hi!=null&&i!==o.hi)?C('contexto_suave'):C('acento')},s);
+  tx(s,X+bw/2,h-6,lab[i],{'text-anchor':'middle'});if(o.lab&&o.lab.includes(i))tx(s,X+bw/2,y-6,f(x),{'text-anchor':'middle',fill:C('tinta'),'font-weight':600})})}
+function spark(id,v,c){const [s,w,h]=svg(id);const mx=Math.max(...v),mn=Math.min(...v),X=i=>2+i*(w-8)/(v.length-1),Y=x=>h-4-(x-mn)/(mx-mn||1)*(h-8);
+ el('polyline',{points:v.map((x,i)=>X(i)+','+Y(x)).join(' '),fill:'none',stroke:C('contexto'),'stroke-width':1.5,'stroke-linejoin':'round'},s);el('circle',{cx:X(v.length-1),cy:Y(v[v.length-1]),r:3,fill:c||C('acento')},s)}
+function meta(id,val,esc=1.2){const [s,w,h]=svg(id);el('rect',{x:0,y:h/2-3,width:w,height:6,rx:3,fill:C('acento_suave')},s);el('rect',{x:0,y:h/2-3,width:w*Math.min(1,val/esc),height:6,rx:3,fill:val>=1?C('acento'):C('contexto')},s);
+ const g=w/esc;el('line',{x1:g,x2:g,y1:h/2-8,y2:h/2+8,stroke:C('tinta'),'stroke-width':2},s)}
+function cascada(id,st,o={}){const [s,w,h]=svg(id);const L=56,R=8,T=20,B=34,f=o.f||fK;let acc=0,mx=0;const p=st.map(x=>{let a,b;if(x.t){a=0;b=x.v;acc=x.v}else{a=acc;acc+=x.v;b=acc}mx=Math.max(mx,a,b);return{...x,a,b}});
+ const top=yax(s,L,w-R,T,h-B,mx,f),Y=v=>h-B-(v/top)*(h-B-T),n=p.length,band=(w-L-R)/n,bw=Math.min(34,band*.6);
+ p.forEach((q,i)=>{const x=L+band*i+(band-bw)/2,y1=Y(Math.max(q.a,q.b)),y2=Y(Math.min(q.a,q.b));el('rect',{x,y:y1,width:bw,height:Math.max(1,y2-y1),rx:2,fill:q.t?C('tinta2'):(q.v>=0?C('bien'):C('mal'))},s);
+  if(i<n-1)el('line',{x1:x+bw,x2:L+band*(i+1)+(band-bw)/2,y1:Y(q.b),y2:Y(q.b),stroke:C('contexto'),'stroke-dasharray':'2 2'},s);
+  tx(s,x+bw/2,y1-6,(q.t?'':(q.v>=0?'+':'−'))+f(Math.abs(q.v)).replace('−',''),{'text-anchor':'middle',fill:C('tinta'),'font-weight':600});
+  q.l.split('\n').forEach((ln,k)=>tx(s,x+bw/2,h-B+15+k*13,ln,{'text-anchor':'middle'}))})}
+function anillo(id,val,o={}){const [s,w,h]=svg(id);const r=Math.min(w,h)/2-(o.g||7),cx=w/2,cy=h/2,g=o.g||7,a=Math.min(val,1)*2*Math.PI;
+ el('circle',{cx,cy,r,fill:'none',stroke:o.pista||C('acento_suave'),'stroke-width':g},s);
+ if(val>=1)el('circle',{cx,cy,r,fill:'none',stroke:o.c||C('acento'),'stroke-width':g},s);
+ else{const x=cx+r*Math.sin(a),y=cy-r*Math.cos(a);el('path',{d:`M${cx},${cy-r} A${r},${r} 0 ${a>Math.PI?1:0} 1 ${x},${y}`,fill:'none',stroke:o.c||C('acento'),'stroke-width':g,'stroke-linecap':'round'},s)}
+ if(o.t)tx(s,cx,cy+(o.fs||16)/3,o.t,{'text-anchor':'middle','font-size':o.fs||16,'font-weight':600,fill:C('tinta')})}
+function barrasG(id,lab,v,o={}){const [s,w,h]=svg(id);const L=o.L||120,R=60,n=v.length,band=h/n,bh=Math.min(10,band*.4),mx=Math.max(...v),f=o.f||fK;const defs=el('defs',{},s);
+ const g=el('linearGradient',{id:id+'g',x1:0,y1:0,x2:1,y2:0},defs);el('stop',{offset:'0%','stop-color':C('acento2')},g);el('stop',{offset:'100%','stop-color':C('acento')},g);
+ v.forEach((x,i)=>{const y=band*i+(band-bh)/2+4,ww=Math.max(2,(x/mx)*(w-L-R));tx(s,L-10,y+bh/2+4,lab[i],{'text-anchor':'end',fill:C('tinta2')});
+  el('rect',{x:L,y,width:w-L-R,height:bh,rx:bh/2,fill:C('contexto_suave'),opacity:.45},s);el('rect',{x:L,y,width:ww,height:bh,rx:bh/2,fill:(o.hi!=null&&i!==o.hi)?C('contexto'):`url(#${id}g)`},s);
+  tx(s,L+ww+8,y+bh/2+4,f(x),{fill:C('tinta'),'font-weight':600})})}
+function areaSpark(id,v,c){const [s,w,h]=svg(id);c=c||C('acento');const mx=Math.max(...v),mn=Math.min(...v)*.9,X=i=>4+i*(w-12)/(v.length-1),Y=x=>h-2-(x-mn)/(mx-mn||1)*(h-10);
+ const g=el('linearGradient',{id:id+'g',x1:0,y1:0,x2:0,y2:1},el('defs',{},s));el('stop',{offset:'0%','stop-color':c,'stop-opacity':.32},g);el('stop',{offset:'100%','stop-color':c,'stop-opacity':0},g);
+ el('path',{d:`M${X(0)},${h} `+v.map((x,i)=>`L${X(i)},${Y(x)}`).join(' ')+` L${X(v.length-1)},${h}Z`,fill:`url(#${id}g)`},s);
+ el('polyline',{points:v.map((x,i)=>X(i)+','+Y(x)).join(' '),fill:'none',stroke:c,'stroke-width':2,'stroke-linejoin':'round'},s);el('circle',{cx:X(v.length-1),cy:Y(v[v.length-1]),r:3.5,fill:c},s)}
+function divergente(id,lab,v,o={}){const [s,w,h]=svg(id);const L=o.L||110,R=64,n=v.length,band=h/n,bh=Math.min(18,band*.55),mx=Math.max(0,...v),f=o.f||(x=>x);
+ const mn=Math.abs(Math.min(0,...v)),G=mn?64:0,esc=(w-L-R-G)/(mx+mn),z=L+G+mn*esc;
+ el('line',{x1:z,x2:z,y1:0,y2:h,stroke:C('contexto'),'stroke-width':1},s);
+ v.forEach((x,i)=>{const y=band*i+(band-bh)/2,ww=Math.abs(x)*esc,x0=x>=0?z:z-ww;tx(s,L-10,y+bh/2+4,lab[i],{'text-anchor':'end',fill:C('tinta2')});
+  el('rect',{x:x0,y,width:Math.max(2,ww),height:bh,rx:3,fill:x>=0?C('bien'):C('mal')},s);
+  tx(s,x>=0?z+ww+6:x0-6,y+bh/2+4,(x>=0?'+':'−')+f(Math.abs(x)),{'text-anchor':x>=0?'start':'end',fill:C('tinta'),'font-weight':600})})}
+document.addEventListener('keydown',e=>{if(e.key==='m')document.body.classList.toggle('map')});
+
+</script></body></html>

@@ -1,0 +1,210 @@
+// =====================================================================
+// Medidas para la página "Roadmap de ventas" (réplica del HTML Dashboard Ventas)
+// Uso: Vista de consultas DAX -> Ejecutar -> "Actualizar modelo con cambios".
+// Todas quedan en la tabla FactMovimientos con prefijo "RV".
+// =====================================================================
+DEFINE
+    // ---------- Base ----------
+    MEASURE FactMovimientos[RV Ventas netas] =
+        SUM ( FactMovimientos[TotalVenta] )
+    MEASURE FactMovimientos[RV Unidades netas] =
+        CALCULATE ( - SUM ( FactMovimientos[Cantidad] ), FactMovimientos[TipoMov] IN { "VE", "ND", "NC" } )
+    MEASURE FactMovimientos[RV Costo ventas] =
+        CALCULATE ( - SUM ( FactMovimientos[ValorMovimiento] ), FactMovimientos[TipoMov] IN { "VE", "ND", "NC" } )
+    MEASURE FactMovimientos[RV Margen bruto] =
+        DIVIDE ( [RV Ventas netas] - [RV Costo ventas], [RV Ventas netas] )
+    MEASURE FactMovimientos[RV Importaciones] =
+        CALCULATE ( COUNTROWS ( FactMovimientos ), FactMovimientos[TipoMov] = "CO" )
+    MEASURE FactMovimientos[RV Mes con datos] =
+        IF ( NOT ISBLANK ( [RV Ventas netas] ) || [RV Importaciones] > 0, 1 )
+
+    // ---------- Mes contra mes anterior (visuales agrupados por DimFecha[AnioMes]) ----------
+    MEASURE FactMovimientos[RV Clave mes anterior] =
+        VAR _k = MAX ( DimFecha[Anio] ) * 100 + MAX ( DimFecha[Mes] )
+        RETURN
+            CALCULATE (
+                MAXX (
+                    FILTER (
+                        ADDCOLUMNS (
+                            SUMMARIZE ( DimFecha, DimFecha[Anio], DimFecha[Mes] ),
+                            "@k", DimFecha[Anio] * 100 + DimFecha[Mes],
+                            "@d", [RV Mes con datos]
+                        ),
+                        [@d] = 1 && [@k] < _k
+                    ),
+                    [@k]
+                ),
+                ALLSELECTED ( DimFecha )
+            )
+    MEASURE FactMovimientos[RV Ventas mes anterior] =
+        VAR _kA = [RV Clave mes anterior]
+        RETURN
+            IF (
+                NOT ISBLANK ( _kA ),
+                CALCULATE ( [RV Ventas netas], ALLSELECTED ( DimFecha ), DimFecha[Anio] = INT ( _kA / 100 ), DimFecha[Mes] = MOD ( _kA, 100 ) )
+            )
+    MEASURE FactMovimientos[RV Unidades mes anterior] =
+        VAR _kA = [RV Clave mes anterior]
+        RETURN
+            IF (
+                NOT ISBLANK ( _kA ),
+                CALCULATE ( [RV Unidades netas], ALLSELECTED ( DimFecha ), DimFecha[Anio] = INT ( _kA / 100 ), DimFecha[Mes] = MOD ( _kA, 100 ) )
+            )
+    MEASURE FactMovimientos[RV Var ventas] =
+        IF (
+            ISINSCOPE ( DimFecha[AnioMes] ),
+            VAR _a = [RV Ventas mes anterior]
+            RETURN DIVIDE ( [RV Ventas netas] - _a, _a )
+        )
+    MEASURE FactMovimientos[RV Var unidades] =
+        IF (
+            ISINSCOPE ( DimFecha[AnioMes] ),
+            VAR _a = [RV Unidades mes anterior]
+            RETURN DIVIDE ( [RV Unidades netas] - _a, _a )
+        )
+    MEASURE FactMovimientos[RV Mejor mes ventas] =
+        MAXX ( VALUES ( DimFecha[AnioMes] ), [RV Ventas netas] )
+    MEASURE FactMovimientos[RV Es mejor mes] =
+        VAR _m = CALCULATE ( [RV Mejor mes ventas], ALLSELECTED ( DimFecha ) )
+        VAR _v = [RV Ventas netas]
+        RETURN IF ( NOT ISBLANK ( _v ) && _v = _m, 1, 0 )
+
+    // ---------- Ruta (etiquetas bajo las barras) ----------
+    MEASURE FactMovimientos[RV Ruta unidades] =
+        IF ( [RV Mes con datos] = 1, FORMAT ( [RV Unidades netas], "#,##0" ) & " und" )
+    MEASURE FactMovimientos[RV Ruta variacion] =
+        IF (
+            ISINSCOPE ( DimFecha[AnioMes] ) && [RV Mes con datos] = 1,
+            VAR _d = [RV Var ventas]
+            RETURN
+                IF (
+                    ISBLANK ( _d ),
+                    IF ( ISBLANK ( [RV Clave mes anterior] ), "inicio", "sin base" ),
+                    IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0%" )
+                )
+        )
+    MEASURE FactMovimientos[RV Ruta importacion] =
+        IF ( [RV Mes con datos] = 1, IF ( [RV Importaciones] > 0, "◯", " " ) )
+
+    // ---------- Encabezado ----------
+    MEASURE FactMovimientos[RV Titulo] =
+        VAR _cod = SELECTEDVALUE ( DimProducto[CodigoProducto] )
+        VAR _desc = SELECTEDVALUE ( DimProducto[Descripcion] )
+        RETURN
+            "Roadmap de ventas — "
+                & IF (
+                    ISBLANK ( _cod ),
+                    IF ( ISFILTERED ( DimProducto[CodigoProducto] ), "Selección de productos", "Todos los productos" ),
+                    _cod & " · " & _desc
+                )
+    MEASURE FactMovimientos[RV Periodo] =
+        VAR _t =
+            FILTER (
+                ADDCOLUMNS (
+                    SUMMARIZE ( DimFecha, DimFecha[Anio], DimFecha[Mes], DimFecha[NombreMes] ),
+                    "@k", DimFecha[Anio] * 100 + DimFecha[Mes],
+                    "@d", [RV Mes con datos]
+                ),
+                [@d] = 1
+            )
+        VAR _kI = MINX ( _t, [@k] )
+        VAR _kF = MAXX ( _t, [@k] )
+        RETURN
+            "Periodo "
+                & MAXX ( FILTER ( _t, [@k] = _kI ), DimFecha[NombreMes] & " " & DimFecha[Anio] ) & " – "
+                & MAXX ( FILTER ( _t, [@k] = _kF ), DimFecha[NombreMes] & " " & DimFecha[Anio] )
+
+    // ---------- Indicadores ----------
+    MEASURE FactMovimientos[RV KPI ventas] = FORMAT ( [RV Ventas netas], "$#,##0" )
+    MEASURE FactMovimientos[RV KPI unidades] = FORMAT ( [RV Unidades netas], "#,##0" )
+    MEASURE FactMovimientos[RV KPI margen] = FORMAT ( [RV Margen bruto], "0.0%" )
+    MEASURE FactMovimientos[RV KPI margen detalle] =
+        FORMAT ( [RV Ventas netas] - [RV Costo ventas], "$#,##0" ) & " sobre costo promedio"
+    MEASURE FactMovimientos[RV KPI mejor mes] =
+        VAR _t =
+            FILTER (
+                ADDCOLUMNS ( SUMMARIZE ( DimFecha, DimFecha[Anio], DimFecha[Mes], DimFecha[NombreMes] ), "@v", [RV Ventas netas] ),
+                NOT ISBLANK ( [@v] )
+            )
+        RETURN MAXX ( TOPN ( 1, _t, [@v], DESC ), DimFecha[NombreMes] & " " & RIGHT ( DimFecha[Anio], 2 ) )
+    MEASURE FactMovimientos[RV KPI mejor mes valor] = FORMAT ( [RV Mejor mes ventas], "$#,##0" )
+    MEASURE FactMovimientos[RV Var ultimo mes] =
+        VAR _t =
+            FILTER (
+                ADDCOLUMNS (
+                    SUMMARIZE ( DimFecha, DimFecha[Anio], DimFecha[Mes] ),
+                    "@k", DimFecha[Anio] * 100 + DimFecha[Mes],
+                    "@v", [RV Ventas netas],
+                    "@d", [RV Mes con datos]
+                ),
+                [@d] = 1
+            )
+        VAR _kU = MAXX ( FILTER ( _t, NOT ISBLANK ( [@v] ) ), [@k] )
+        VAR _kA = MAXX ( FILTER ( _t, [@k] < _kU ), [@k] )
+        VAR _vU = MAXX ( FILTER ( _t, [@k] = _kU ), [@v] )
+        VAR _vA = MAXX ( FILTER ( _t, [@k] = _kA ), [@v] )
+        RETURN DIVIDE ( _vU - _vA, _vA )
+    MEASURE FactMovimientos[RV KPI ultimo mes] =
+        VAR _d = [RV Var ultimo mes]
+        RETURN IF ( ISBLANK ( _d ), "—", IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0%" ) )
+    MEASURE FactMovimientos[RV KPI ultimo mes detalle] =
+        VAR _t =
+            FILTER (
+                ADDCOLUMNS (
+                    SUMMARIZE ( DimFecha, DimFecha[Anio], DimFecha[Mes], DimFecha[NombreMes] ),
+                    "@k", DimFecha[Anio] * 100 + DimFecha[Mes],
+                    "@v", [RV Ventas netas],
+                    "@d", [RV Mes con datos]
+                ),
+                [@d] = 1
+            )
+        VAR _kU = MAXX ( FILTER ( _t, NOT ISBLANK ( [@v] ) ), [@k] )
+        VAR _kA = MAXX ( FILTER ( _t, [@k] < _kU ), [@k] )
+        RETURN
+            MAXX ( FILTER ( _t, [@k] = _kU ), DimFecha[NombreMes] & " " & RIGHT ( DimFecha[Anio], 2 ) ) & " vs "
+                & MAXX ( FILTER ( _t, [@k] = _kA ), DimFecha[NombreMes] & " " & RIGHT ( DimFecha[Anio], 2 ) )
+
+    // ---------- Participación por producto ----------
+    MEASURE FactMovimientos[RV Ranking ventas] = FORMAT ( [RV Ventas netas], "$#,##0" )
+
+    // ---------- Comparativo mes a mes ----------
+    MEASURE FactMovimientos[RV Tabla unidades] =
+        IF ( NOT ISINSCOPE ( DimFecha[AnioMes] ) || [RV Mes con datos] = 1, FORMAT ( [RV Unidades netas], "#,##0" ) )
+    MEASURE FactMovimientos[RV Tabla var unidades] =
+        IF (
+            ISINSCOPE ( DimFecha[AnioMes] ) && [RV Mes con datos] = 1,
+            VAR _d = [RV Var unidades]
+            RETURN IF ( ISBLANK ( _d ), "—", IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0%" ) )
+        )
+    MEASURE FactMovimientos[RV Tabla ventas] =
+        IF ( NOT ISINSCOPE ( DimFecha[AnioMes] ) || [RV Mes con datos] = 1, FORMAT ( [RV Ventas netas], "$#,##0.00" ) )
+    MEASURE FactMovimientos[RV Tabla var ventas] =
+        IF (
+            ISINSCOPE ( DimFecha[AnioMes] ) && [RV Mes con datos] = 1,
+            VAR _d = [RV Var ventas]
+            RETURN IF ( ISBLANK ( _d ), "—", IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0%" ) )
+        )
+    MEASURE FactMovimientos[RV Tabla precio] =
+        IF (
+            NOT ISINSCOPE ( DimFecha[AnioMes] ) || [RV Mes con datos] = 1,
+            FORMAT ( DIVIDE ( [RV Ventas netas], [RV Unidades netas] ), "$0.00" )
+        )
+
+// ---------- Pruebas (compara con el HTML original) ----------
+EVALUATE
+    ROW (
+        "Título", [RV Titulo], "Periodo", [RV Periodo],
+        "Ventas", [RV KPI ventas], "Unidades", [RV KPI unidades], "Margen", [RV KPI margen],
+        "Margen detalle", [RV KPI margen detalle], "Mejor mes", [RV KPI mejor mes] & " " & [RV KPI mejor mes valor],
+        "Último mes", [RV KPI ultimo mes] & " · " & [RV KPI ultimo mes detalle]
+    )
+EVALUATE
+    SUMMARIZECOLUMNS (
+        DimFecha[AnioMes],
+        "Ventas", [RV Ventas netas], "Unidades", [RV Unidades netas], "Mejor", [RV Es mejor mes],
+        "Ruta und", [RV Ruta unidades], "Ruta var", [RV Ruta variacion], "Importación", [RV Ruta importacion],
+        "Var und", [RV Tabla var unidades], "Var USD", [RV Tabla var ventas], "Precio", [RV Tabla precio]
+    )
+    ORDER BY DimFecha[AnioMes]
+EVALUATE
+    SUMMARIZECOLUMNS ( DimProducto[CodigoProducto], DimProducto[Descripcion], "Ventas", [RV Ranking ventas] )

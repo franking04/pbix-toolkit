@@ -1,0 +1,15 @@
+{
+  "name": "pbix-toolkit",
+  "description": "Marketplace de pbix-toolkit: skill para leer, auditar, modificar y diseñar reportes de Power BI (.pbix).",
+  "owner": {
+    "name": "Francisco J. Chacón R.",
+    "url": "https://github.com/franking04"
+  },
+  "plugins": [
+    {
+      "name": "pbix-toolkit",
+      "source": "./",
+      "description": "Lee, audita, modifica y diseña reportes de Power BI (.pbix) a nivel de metadatos, para Power BI Report Server y el servicio de Power BI."
+    }
+  ]
+}

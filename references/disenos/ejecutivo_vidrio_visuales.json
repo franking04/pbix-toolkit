@@ -1,0 +1,132 @@
+{
+ "lienzo": [
+  1280,
+  720
+ ],
+ "imagen": [
+  1920,
+  1080
+ ],
+ "cajas": [
+  {
+   "orden": 0,
+   "visual": "textbox",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 22,
+   "w": 246,
+   "h": 16,
+   "anidado": false,
+   "texto": "Dirección general · cierre de septiembre 2026"
+  },
+  {
+   "orden": 1,
+   "visual": "card de texto (título-conclusión dinámico, DAX)",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 40,
+   "w": 583,
+   "h": 27,
+   "anidado": false,
+   "texto": "El margen se recupera 1.4 pp gracias a menores costos logíst"
+  },
+  {
+   "orden": 2,
+   "visual": "card de texto (medida Periodo)",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 70,
+   "w": 359,
+   "h": 16,
+   "anidado": false,
+   "texto": "Septiembre 2026 · USD · contra agosto y contra septiembre de"
+  },
+  {
+   "orden": 3,
+   "visual": "slicer Dropdown (sin fondo ni borde: la píldora está en la imagen)",
+   "id": null,
+   "caja": "fondo",
+   "x": 920,
+   "y": 30,
+   "w": 160,
+   "h": 32,
+   "anidado": false,
+   "texto": "Messep 2026"
+  },
+  {
+   "orden": 4,
+   "visual": "slicer Dropdown (sin fondo ni borde)",
+   "id": null,
+   "caja": "fondo",
+   "x": 1096,
+   "y": 30,
+   "w": 160,
+   "h": 32,
+   "anidado": false,
+   "texto": "UnidadTodas"
+  },
+  {
+   "orden": 5,
+   "visual": "cardVisual héroe + Deneb área con degradado (12 meses) + cardVisual de 3 filas (Δ con color por regla)",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 112,
+   "w": 296,
+   "h": 568,
+   "anidado": false,
+   "texto": "Utilidad operativa · septiembre $6.24M ▲ 12.6 % vs ago ▲ 8.1"
+  },
+  {
+   "orden": 6,
+   "visual": "Deneb: área con degradado (2026) + línea gris (2025), etiqueta al final · alternativa nativa: lineChart",
+   "id": null,
+   "caja": "fondo",
+   "x": 336,
+   "y": 112,
+   "w": 920,
+   "h": 280,
+   "anidado": false,
+   "texto": "Utilidad operativa por mes Millones de USD · 2026 contra 202"
+  },
+  {
+   "orden": 7,
+   "visual": "barChart nativo divergente (color por regla: verde suma, rojo resta), ordenado por impacto",
+   "id": null,
+   "caja": "fondo",
+   "x": 336,
+   "y": 408,
+   "w": 452,
+   "h": 272,
+   "anidado": false,
+   "texto": "Qué movió la utilidad: de $5.54M a $6.24M Contribución de ca"
+  },
+  {
+   "orden": 8,
+   "visual": "tableEx: medida SVG píldora Δ + medida SVG sparkline (ImageUrl)",
+   "id": null,
+   "caja": "fondo",
+   "x": 804,
+   "y": 408,
+   "w": 452,
+   "h": 272,
+   "anidado": false,
+   "texto": "Unidades de negocio Utilidad operativa de septiembre · Δ vs "
+  },
+  {
+   "orden": 9,
+   "visual": "textbox (fuente) + card de texto (medida Actualizado) + actionButton ⓘ → tooltip/página de definiciones",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 694,
+   "w": 1232,
+   "h": 16,
+   "anidado": false,
+   "texto": "Fuente: ERP Finanzas (estado de resultados) · Actualizado al"
+  }
+ ]
+}

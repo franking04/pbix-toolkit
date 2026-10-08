@@ -1,0 +1,97 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "data": {
+  "name": "dataset"
+ },
+ "width": "container",
+ "height": "container",
+ "config": {
+  "background": "transparent",
+  "customFormatTypes": true,
+  "view": {
+   "stroke": null
+  },
+  "font": "Segoe UI",
+  "axis": {
+   "labelColor": "#5D6B82",
+   "labelFontSize": 12,
+   "labelFont": "Segoe UI",
+   "title": null,
+   "domain": false,
+   "ticks": false,
+   "labelPadding": 6,
+   "gridColor": "#DCE1E8",
+   "gridOpacity": 0.6
+  },
+  "axisX": {
+   "grid": false,
+   "labelAngle": 0
+  },
+  "legend": {
+   "disable": true
+  },
+  "text": {
+   "font": "Segoe UI",
+   "fontSize": 12,
+   "color": "#131C2B"
+  },
+  "padding": 4
+ },
+ "transform": [
+  {
+   "calculate": "2*PI*min(max(datum['Avance'],0),0.9999)",
+   "as": "_t"
+  }
+ ],
+ "layer": [
+  {
+   "mark": {
+    "type": "arc",
+    "outerRadius": {
+     "expr": "min(width,height)/2"
+    },
+    "innerRadius": {
+     "expr": "min(width,height)/2-14"
+    },
+    "theta": 0,
+    "theta2": 6.2831,
+    "color": "#E5EDF8"
+   }
+  },
+  {
+   "mark": {
+    "type": "arc",
+    "outerRadius": {
+     "expr": "min(width,height)/2"
+    },
+    "innerRadius": {
+     "expr": "min(width,height)/2-14"
+    },
+    "cornerRadius": 7.0,
+    "color": "#2264C4"
+   },
+   "encoding": {
+    "theta": {
+     "field": "_t",
+     "type": "quantitative",
+     "scale": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "fontSize": 28,
+    "fontWeight": 600,
+    "color": "#131C2B"
+   },
+   "encoding": {
+    "text": {
+     "field": "Avance",
+     "format": "0 %",
+     "formatType": "pbiFormat"
+    }
+   }
+  }
+ ]
+}

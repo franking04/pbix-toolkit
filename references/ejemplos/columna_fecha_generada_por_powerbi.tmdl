@@ -1,0 +1,21 @@
+createOrReplace
+
+	ref table DimFecha
+
+		column AnioMes
+			dataType: dateTime
+			formatString: yyyy-mm
+			lineageTag: 00000000-0000-0000-0000-000000000002
+			summarizeBy: none
+			sourceColumn: AnioMes
+
+			variation Variación
+				isDefault
+				relationship: 00000000-0000-0000-0000-000000000003
+				defaultHierarchy: LocalDateTable_00000000-0000-0000-0000-000000000004.'Jerarquía de fechas'
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
+
+			annotation PBI_FormatHint = {"isDateTimeCustom":true}

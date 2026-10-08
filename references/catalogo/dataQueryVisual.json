@@ -1,0 +1,1 @@
+{"tipo":"dataQueryVisual","roles":{"Values":{"tipo":"GroupingOrMeasure","displayName":null,"requerido":false}},"objetos":{"general":{"formatString":{"tipo":"formatting"}},"overrideDataReduction":{"count":{"tipo":"numeric"}},"columnOptions":{"suppressJoinPredicate":{"tipo":"bool"}}}}

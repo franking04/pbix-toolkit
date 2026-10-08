@@ -1,0 +1,2591 @@
+{
+ "_leyenda": {
+  "esquema": "todo lo de <tipo>.json (CLI)",
+  "guardado": "aparece en un .pbix nuestro (plataforma:release:formato)",
+  "se_ve": "comprobado en pantalla",
+  "ignorado": "Power BI lo guarda pero no lo aplica en pantalla",
+  "fuera_de_esquema": "guardado en un .pbix pero no existe en el catálogo del CLI",
+  "borrado_al_guardar": "escrito por nosotros y eliminado por el Desktop al guardar (síntoma de propiedad inválida)"
+ },
+ "_archivos_escaneados": [
+  "reporte grande guardado por el Desktop de la nube 2025.01 (Layout clásico)",
+  "reporte de inventario guardado por el Desktop para RS 2026.05 (Layout clásico)",
+  "el mismo reporte guardado por el Desktop de la nube 2026.09 (PBIR)",
+  "rediseños generados con la skill y vueltos a guardar en el Desktop"
+ ],
+ "tipos": {
+  "actionButton": {
+   "fill": {
+    "fillColor": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "[captura]"
+    },
+    "image": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "icon": {
+    "horizontalAlignment": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "lineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "lineTransparency": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "shapeType": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "outline": {
+    "lineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "roundEdge": {
+     "borrado_al_guardar": "servicio 2026.09 y RS 2026.05: archivo generado vs el mismo archivo vuelto a guardar [probado]",
+     "fuera_de_esquema": true
+    }
+   },
+   "text": {
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontFamily": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "horizontalAlignment": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "text": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "botón de navegación con texto [captura]"
+    },
+    "verticalAlignment": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "*": {
+   "background": {
+    "show": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "color": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ],
+     "se_ve": "contenedor (textbox vacío) [edicion_reporte.md]"
+    },
+    "transparency": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "border": {
+    "show": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "color": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "radius": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ],
+     "se_ve": "8 se aprecia, 4 se ve cuadrado [edicion_reporte.md]"
+    },
+    "width": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "title": {
+    "show": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "alignment": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "background": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "text": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "titleWrap": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "heading": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "visualHeader": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "border": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "visualLink": {
+    "bookmark": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "navigationSection": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ],
+     "se_ve": "PageNavigation en actionButton [captura]"
+    },
+    "show": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "tooltip": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "type": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "dropShadow": {
+    "angle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "position": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "preset": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "shadowBlur": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "shadowDistance": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "shadowSpread": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "visualHeaderTooltip": {
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "visualTooltip": {
+    "section": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "type": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "general": {
+    "keepLayerOrder": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "lockAspect": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "stylePreset": {
+    "name": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "padding": {
+    "bottom": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "advancedSlicerVisual": {
+   "accentBar": {
+    "color": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "position": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "width": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "general": {
+    "filter": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "image": {
+    "padding": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "position": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "layout": {
+    "borderColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "borderWidth": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "customizeLines": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fixedHeight": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "gridlineColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "gridlineWidth": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "lineColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "maxTiles": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "orientation": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "showFixedSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "style": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "overFlow": {
+    "overFlowDirection": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "selection": {
+    "strictSingleSelect": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "selectionIcon": {
+    "show": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "spacing": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   }
+  },
+  "basicShape": {
+   "fill": {
+    "fillColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "general": {
+    "shapeType": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "line": {
+    "lineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "weight": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "bookmarkNavigator": {
+   "bookmarks": {
+    "allowDeselectionBookmark": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "deselectionBookmark": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "hideDeselectedBookmark": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "selectedBookmark": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "fill": {
+    "fillColor": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "glow": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "layout": {
+    "cellPadding": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "columnCount": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "orientation": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "rowCount": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "shadow": {
+    "shadowBlur": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "shape": {
+    "parallelogramSlant": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "roundEdge": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "tabCutCornerSnipSizeTop": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "tileShape": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "text": {
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "card": {
+   "categoryLabels": {
+    "color": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "false oculta la etiqueta [edicion_reporte.md]"
+    }
+   },
+   "labels": {
+    "color": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "color, también por reglas (Conditional) [edicion_reporte.md]"
+    },
+    "fontFamily": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "pila completa de fuentes [edicion_reporte.md]"
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "tamaño del valor [edicion_reporte.md]"
+    },
+    "labelDisplayUnits": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "1 = unidades completas; 1.0D también se ve bien [captura]"
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "preserveWhitespace": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "wordWrap": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "clusteredBarChart": {
+   "categoryAxis": {
+    "concatenateLabels": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "innerPadding": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "maxMarginFactor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "labels": {
+    "backgroundTransparency": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "color": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "enableBackground": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPosition": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "legend": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "valueAxis": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "start": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "y1AxisReferenceLine": {
+    "dataLabelShow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "displayName": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "lineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "style": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "value": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "zoom": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "clusteredColumnChart": {
+   "categoryAxis": {
+    "axisType": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "concatenateLabels": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "innerPadding": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "italic": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "maxMarginFactor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "preferredCategoryWidth": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ],
+     "ignorado": "false no oculta el eje [edicion_reporte.md]",
+     "ignorado_si": "false"
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "debe ir explícito o aparece el título [edicion_reporte.md]"
+    }
+   },
+   "dataPoint": {
+    "fill": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "color por reglas con dataViewWildcard (mejor mes) [captura]"
+    }
+   },
+   "labels": {
+    "color": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "enableBackground": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontFamily": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelDisplayUnits": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "1 = sin \"K\" [captura]"
+    },
+    "labelPosition": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "[captura]"
+    }
+   },
+   "legend": {
+    "position": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showGradientLegend": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "valueAxis": {
+    "gridlineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridlineShow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "start": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "zoom": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "columnChart": {
+   "categoryAxis": {
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "concatenateLabels": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "innerPadding": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "maxMarginFactor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "preferredCategoryWidth": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "dataPoint": {
+    "fill": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "labels": {
+    "backgroundColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "color": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "enableBackground": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelOverflow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPosition": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "legend": {
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "position": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showGradientLegend": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "underline": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "valueAxis": {
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridlineShow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "gauge": {
+   "axis": {
+    "target": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "dataPoint": {
+    "fill": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "target": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "labels": {
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "target": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "image": {
+   "general": {
+    "imageUrl": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "image": {
+    "fit": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "sourceFile": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   }
+  },
+  "lineChart": {
+   "categoryAxis": {
+    "axisType": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontFamily": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridlineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridlineShow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "maxMarginFactor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "dataPoint": {
+    "fill": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "forecast": {
+    "bandLineShow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "displayName": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "interpolation": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "interpolationSmooth": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "interpolationSmoothParam": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "lineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "style": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transform": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "labels": {
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "color": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPosition": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "legend": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "lineStyles": {
+    "lineChartType": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "markerColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "markerShape": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "markerSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showMarker": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showSeries": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "strokeWidth": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "markers": {
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "trend": {
+    "displayName": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "valueAxis": {
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridlineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "y1AxisReferenceLine": {
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "lineClusteredColumnComboChart": {
+   "categoryAxis": {
+    "axisType": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "concatenateLabels": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "maxMarginFactor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "dataPoint": {
+    "fill": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "labels": {
+    "backgroundColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "color": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "enableBackground": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPosition": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAll": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "legend": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "lineStyles": {
+    "areaShow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showMarker": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "strokeWidth": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "valueAxis": {
+    "bold": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showAxisTitle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "zoom": {
+    "categoryMax": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "categorySize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "multiRowCard": {
+   "card": {
+    "barColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "barShow": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "barWeight": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "cardPadding": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "outlineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "outlineStyle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "outlineWeight": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "categoryLabels": {
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "dataLabels": {
+    "color": {
+     "guardado": [
+      "servicio"
+     ],
+     "ignorado": "idem [edicion_reporte.md]"
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ],
+     "ignorado": "existe en el esquema pero no cambia el valor en pantalla → usa card [edicion_reporte.md]"
+    }
+   }
+  },
+  "pieChart": {
+   "legend": {
+    "position": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "pivotTable": {
+   "blankRows": {
+    "showBlankRows": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "columnFormatting": {
+    "alignment": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "dataBars": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "styleHeader": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "styleSubtotals": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "styleTotal": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "styleValues": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "columnHeaders": {
+    "alignment": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "autoSizeColumnWidth": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontFamily": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "titleAlignment": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "wordWrap": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "columnTotal": {
+    "applyToHeaders": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "columnWidth": {
+    "value": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "general": {
+    "layout": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "grid": {
+    "gridHorizontal": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridHorizontalColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridHorizontalWeight": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridVertical": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridVerticalColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridVerticalWeight": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "imageHeight": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "outlineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "rowPadding": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "textSize": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "rowHeaders": {
+    "alignment": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "expandCollapseButtonsSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showExpandCollapseButtons": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "steppedLayoutIndentation": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "wordWrap": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "rowTotal": {
+    "applyToHeaders": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "subTotals": {
+    "applyToHeaders": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "columnSubtotals": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "[edicion_reporte.md]"
+    },
+    "columnSubtotalsLabel": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "levelSubtotalEnabled": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "levelSubtotalLabel": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "perColumnLevel": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "perRowLevel": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "rowSubtotals": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "[edicion_reporte.md]"
+    }
+   },
+   "values": {
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColorPrimary": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColorSecondary": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "icon": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "valuesOnRow": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "valores en filas [edicion_reporte.md]"
+    },
+    "wordWrap": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "pureVizInfographicC9801BF222134D2D83FA9C41861F3482": {
+   "circle": {
+    "fieldnames": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "modifications": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "svgCode": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "editpanel": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "scatterChart": {
+   "categoryAxis": {
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelDisplayUnits": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "start": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "treatNullsAsZero": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "categoryLabels": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "colorBorder": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "colorByCategory": {
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "valueAxis": {
+    "labelDisplayUnits": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "shape": {
+   "fill": {
+    "fillColor": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "glow": {
+    "shadowBlur": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "outline": {
+    "lineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "weight": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "rotation": {
+    "angle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "shapeAngle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "textAngle": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "shadow": {
+    "shadowBlur": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "transparency": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "shape": {
+    "tileShape": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "slicer": {
+   "data": {
+    "endDate": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "isInvertedSelectionMode": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "mode": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "startDate": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "date": {
+    "fontColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "textSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "dateRange": {
+    "includeToday": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "general": {
+    "filter": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "orientation": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "outlineColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "selfFilter": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "selfFilterEnabled": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "header": {
+    "bold": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "outlineStyle": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "showRestatement": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "text": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "textSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "items": {
+    "fontColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "textSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "selection": {
+    "selectAllCheckboxEnabled": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "slider": {
+    "color": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "show": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "false oculta el deslizador de fechas [edicion_reporte.md]"
+    }
+   }
+  },
+  "tableEx": {
+   "columnFormatting": {
+    "alignment": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "dataBars": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "barras de datos [edicion_reporte.md, captura]"
+    },
+    "labelPrecision": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "columnHeaders": {
+    "alignment": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "autoSizeColumnWidth": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontFamily": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "outlineColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "outlineStyle": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "wordWrap": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "outline": {
+     "borrado_al_guardar": "servicio 2026.09 y RS 2026.05: archivo generado vs el mismo archivo vuelto a guardar [probado]",
+     "fuera_de_esquema": true
+    }
+   },
+   "columnWidth": {
+    "value": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "grid": {
+    "gridHorizontal": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "gridHorizontalColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "gridVertical": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "gridVerticalColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "outlineColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "outlineStyle": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "rowPadding": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "textSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    }
+   },
+   "total": {
+    "backColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontFamily": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "totals": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   },
+   "values": {
+    "backColor": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColorPrimary": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "backColorSecondary": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontColor": {
+     "guardado": [
+      "servicio"
+     ],
+     "se_ve": "color por reglas con selector dataViewWildcard + metadata [captura]"
+    },
+    "fontColorSecondary": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ]
+    },
+    "fontSize": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "icon": {
+     "guardado": [
+      "servicio"
+     ]
+    },
+    "wordWrap": {
+     "guardado": [
+      "servicio"
+     ]
+    }
+   }
+  },
+  "textbox": {
+   "general": {
+    "paragraphs": {
+     "guardado": [
+      "rs",
+      "servicio"
+     ],
+     "se_ve": "texto estático; 28–32 px de alto con 8.6–9.4 pt sin scroll [captura]"
+    }
+   }
+  }
+ }
+}

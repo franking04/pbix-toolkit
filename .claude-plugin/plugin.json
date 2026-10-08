@@ -1,0 +1,14 @@
+{
+  "name": "pbix-toolkit",
+  "displayName": "pbix-toolkit",
+  "version": "2.6.4",
+  "description": "Lee, audita, modifica y diseña reportes de Power BI (.pbix) a nivel de metadatos, para Power BI Report Server y el servicio de Power BI.",
+  "author": {
+    "name": "Francisco J. Chacón R.",
+    "url": "https://github.com/franking04"
+  },
+  "homepage": "https://github.com/franking04/pbix-toolkit",
+  "repository": "https://github.com/franking04/pbix-toolkit",
+  "license": "MIT",
+  "keywords": ["power-bi", "pbix", "report-server", "dax", "tmdl", "pbir", "dashboard", "deneb"]
+}

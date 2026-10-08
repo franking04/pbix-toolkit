@@ -1,0 +1,1 @@
+{"tipo":"accessibleTable","roles":{"Rows":{"tipo":"Grouping","displayName":"Rows","requerido":false},"Columns":{"tipo":"Grouping","displayName":"Columns","requerido":false},"Values":{"tipo":"Measure","displayName":"Values","requerido":false}},"objetos":{"general":{"formatString":{"tipo":"formatting"}}}}

@@ -1,0 +1,104 @@
+{
+ "_nota": "Fuente: learn.microsoft.com/power-bi/report-server (changelog, whats-new, compare-report-server-service), revisado en octubre de 2026. Actualiza al salir cada release (enero, mayo, septiembre). 'por_validar' = nombre interno del visual o regla aún no comprobada con un archivo guardado por el Desktop para Report Server.",
+ "report_server": {
+  "releases": {
+   "2026.09": {
+    "desktop": "2.158.1177.0",
+    "servidor": "1.27.9767.40555 (15.0.1122.94)",
+    "publicado": "2026-09-29",
+    "novedades": []
+   },
+   "2026.05": {
+    "desktop": "2.154.956.0",
+    "servidor": "1.26.9637.31070 (15.0.1121.109)",
+    "publicado": "2026-05-21",
+    "novedades": [
+     "tarjeta nueva (cardVisual) con small multiples",
+     "button slicer (advancedSlicerVisual)",
+     "pegar selecciones en slicers"
+    ]
+   },
+   "2026.01": {
+    "desktop": "2.150.1926.0",
+    "servidor": "1.25.9508.3237 (15.0.1120.113)",
+    "publicado": "2026-01-21",
+    "novedades": []
+   }
+  },
+  "observado": {
+   "2026.05": {
+    "Version": "1.28 en el archivo original; 1.33 tras guardarlo de nuevo con el mismo Desktop para RS 2026.05 (Version no indica el release)",
+    "formato_reporte": "Layout clásico",
+    "tema_base": "CY26SU05",
+    "config_version": "5.73",
+    "fuente": "archivos guardados por el Desktop para Report Server de mayo 2026",
+    "visuales_vistos": [
+     "actionButton",
+     "advancedSlicerVisual",
+     "card",
+     "cardVisual",
+     "clusteredColumnChart",
+     "deneb7E15AEF80B9E4D4F8E12924291ECE89A (Deneb, pbiviz importado)",
+     "htmlContent (personalizado)",
+     "shape",
+     "slicer",
+     "tableEx"
+    ],
+    "vistas_desktop": "vista de consultas DAX y vista TMDL disponibles [probado: partes DAXQueries/ y TMDLScripts/ guardadas por OnPrem 2026.05]",
+    "catalogo_cli": "el catálogo del CLI de Microsoft 0.5.0 da 0 errores sobre archivos guardados por el Desktop para RS 2026.05 (mismos objetos y propiedades que la nube) [probado]",
+    "abre_pbir_de_la_nube": "el Desktop para RS 2026.05 abre un PBIR guardado por la nube 2026.09 y con «Guardar como» queda OnPrem 2026.05, Version 1.33, todavía PBIR; visuales y report.json idénticos en contenido; agrega SecurityBindings; conserva TMDLScripts [observado]",
+    "publicar_pbir": "un PBIR guardado como OnPrem 2026.05 → Guardar como › Power BI Report Server: «Ha habido un error al intentar guardar el informe en Power BI Report Server». Un archivo clásico en la misma carpeta sí sube y se ve → el error es por el formato PBIR [probado]",
+    "portal": "reporte clásico de 2 capas (fondo, tema, cardVisual + cardImage SVG, SVG en tableEx, areaChart, slicers) se ve igual que en el Desktop; formatString con la configuración regional del navegador; FORMAT(…,\"en-US\") sin cambio [probado]",
+    "efectos_probados": "tema personalizado en clásico aplicado; imagen de fondo 1920x1080 Fill nítida; visuales transparentes; medidas SVG en tableEx y en cardVisual.cardImage (no en card clásica ni como valor de cardVisual); accentBar, border.radius y glow de shape visibles; Deneb con plantilla Vega-Lite visible; el Desktop no borró ninguna propiedad válida al guardar [probado]"
+   }
+  },
+  "visuales_no_soportados": {
+   "qnaVisual": "Q&A",
+   "keyDriversVisual": "Key influencers",
+   "scriptVisual": "visual de R",
+   "pythonVisual": "visual de Python"
+  },
+  "visuales_desde": {
+   "cardVisual": "2026.05",
+   "advancedSlicerVisual": "2026.05"
+  },
+  "funciones_no_disponibles": [
+   "dashboards y apps",
+   "suscripciones por correo de reportes Power BI",
+   "alertas de datos",
+   "personalizar visuales",
+   "drillthrough entre reportes",
+   "parámetros M dinámicos",
+   "modelos compuestos",
+   "actualización automática de página",
+   "exportar a PowerPoint",
+   "Analizar en Excel",
+   "exportar datos con el diseño actual (solo resumidos)",
+   "Q&A y Quick Insights",
+   "visuales R/Python",
+   "funciones en preview del Desktop"
+  ],
+  "por_validar": [
+   "marcadores de reporte (la tabla de Microsoft los marca como no disponibles)",
+   "displayOption FitToWidth en clásico (2)",
+   "visual personalizado HTML Content en el servidor",
+   "cardVisual y propiedades nuevas de matriz (columnHeaders.autoSizeColumnWidth/defaultColumnWidth) en RS 2026.05",
+   "glow de actionButton y glowCustom de cardVisual: se guardan pero no se vieron"
+  ]
+ },
+ "servicio": {
+  "observado": {
+   "2026.09": {
+    "Version": "1.33",
+    "formato_reporte": "PBIR",
+    "fuente": "archivo real guardado por Desktop de la nube septiembre 2026"
+   },
+   "2025.01": {
+    "Version": "1.31",
+    "formato_reporte": "Layout clásico",
+    "fuente": "archivo real guardado por Desktop de la nube enero 2025"
+   }
+  }
+ },
+ "compatibilidad": "Trabaja con el Desktop para Report Server del mismo release que el servidor. Observado (2026.05): ese Desktop abre un PBIR guardado por el Desktop de la nube (incluso 2026.09) y al guardarlo lo marca OnPrem sin convertirlo a Layout clásico; publicarlo en el servidor 2026.05 da error (probado con publicación de control). Para un reporte nuevo para RS, lo seguro sigue siendo el Layout clásico sobre un archivo guardado por el Desktop para RS."
+}

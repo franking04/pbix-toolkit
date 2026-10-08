@@ -1,0 +1,21 @@
+# Reportes y modelos: nunca subir archivos de trabajo (pueden contener datos o metadatos reales)
+*.pbix
+!demo/*.pbix
+*.pbit
+*.pbip
+*.SemanticModel/
+*.Report/
+
+# Estado local de la skill
+registro_disenos.json
+estilos/
+
+# Python / Node
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+
+# Sistema
+.DS_Store
+Thumbs.db

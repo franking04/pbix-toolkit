@@ -1,0 +1,156 @@
+{
+ "lienzo": [
+  1280,
+  720
+ ],
+ "imagen": [
+  1920,
+  1080
+ ],
+ "cajas": [
+  {
+   "orden": 0,
+   "visual": "textbox",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 22,
+   "w": 190,
+   "h": 16,
+   "anidado": false,
+   "texto": "Comité de dirección · octubre 2026"
+  },
+  {
+   "orden": 1,
+   "visual": "card de texto (título-conclusión dinámico, DAX)",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 40,
+   "w": 692,
+   "h": 27,
+   "anidado": false,
+   "texto": "Las ventas superan el plan 3.2 % y la cobertura de inventari"
+  },
+  {
+   "orden": 2,
+   "visual": "card de texto (medida Periodo)",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 70,
+   "w": 365,
+   "h": 16,
+   "anidado": false,
+   "texto": "Acumulado enero–septiembre 2026 · USD · contra plan y contra"
+  },
+  {
+   "orden": 3,
+   "visual": "slicer Dropdown (sin fondo ni borde: la píldora está en la imagen)",
+   "id": null,
+   "caja": "fondo",
+   "x": 864,
+   "y": 30,
+   "w": 184,
+   "h": 32,
+   "anidado": false,
+   "texto": "Periodoene–sep 2026"
+  },
+  {
+   "orden": 4,
+   "visual": "slicer Dropdown (sin fondo ni borde)",
+   "id": null,
+   "caja": "fondo",
+   "x": 1072,
+   "y": 30,
+   "w": 184,
+   "h": 32,
+   "anidado": false,
+   "texto": "RegiónTodas"
+  },
+  {
+   "orden": 5,
+   "visual": "cardVisual héroe (valor + 2 referencias) + medida SVG anillo (ImageUrl) + sparkline nativo",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 112,
+   "w": 400,
+   "h": 220,
+   "anidado": false,
+   "texto": "Ventas netas acumuladas $48.6M ▲ 3.2 % vs plan ▲ 9.7 % vs en"
+  },
+  {
+   "orden": 6,
+   "visual": "cardVisual (valor + referencia Δ con color por regla) + medida SVG bullet vs meta (ImageUrl) · sparkline nativo",
+   "id": null,
+   "caja": "fondo",
+   "x": 440,
+   "y": 112,
+   "w": 261,
+   "h": 220,
+   "anidado": false,
+   "texto": "Margen bruto 36.4 % ▼ 0.6 pp vs plan Meta 37.0 % · real 36.4"
+  },
+  {
+   "orden": 7,
+   "visual": "cardVisual (valor + referencia Δ con color por regla) + medida SVG bullet vs meta (ImageUrl) · sparkline nativo",
+   "id": null,
+   "caja": "fondo",
+   "x": 717,
+   "y": 112,
+   "w": 262,
+   "h": 220,
+   "anidado": false,
+   "texto": "Cobertura de inventario 41 días En rango (35–45) Tope 45 día"
+  },
+  {
+   "orden": 8,
+   "visual": "cardVisual (valor + referencia Δ con color por regla) + medida SVG bullet vs meta (ImageUrl) · sparkline nativo",
+   "id": null,
+   "caja": "fondo",
+   "x": 995,
+   "y": 112,
+   "w": 261,
+   "h": 220,
+   "anidado": false,
+   "texto": "Nivel de servicio 96.2 % ▲ 1.1 pp vs plan Meta 95.0 % · real"
+  },
+  {
+   "orden": 9,
+   "visual": "Deneb: área con degradado (2026) + línea punteada (plan) + línea gris (2025); etiquetas al final · alternativa nativa: areaChart con transparencia",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 348,
+   "w": 800,
+   "h": 332,
+   "anidado": false,
+   "texto": "Ventas netas por mes Millones de USD · 2026 contra plan y co"
+  },
+  {
+   "orden": 10,
+   "visual": "tableEx: medida SVG píldora Δ + medida SVG bullet vs plan (ImageUrl); sin bandas ni bordes verticales",
+   "id": null,
+   "caja": "fondo",
+   "x": 840,
+   "y": 348,
+   "w": 416,
+   "h": 332,
+   "anidado": false,
+   "texto": "Cumplimiento por región Ventas acumuladas · Δ y avance contr"
+  },
+  {
+   "orden": 11,
+   "visual": "textbox (fuente) + card de texto (medida Actualizado) + actionButton ⓘ → tooltip/página de definiciones",
+   "id": null,
+   "caja": "fondo",
+   "x": 24,
+   "y": 694,
+   "w": 1232,
+   "h": 16,
+   "anidado": false,
+   "texto": "Fuente: ERP Ventas y Plan comercial · Actualizado al 06/10/2"
+  }
+ ]
+}

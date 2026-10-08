@@ -1,0 +1,161 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "data": {
+  "name": "dataset"
+ },
+ "width": "container",
+ "height": "container",
+ "config": {
+  "background": "transparent",
+  "customFormatTypes": true,
+  "view": {
+   "stroke": null
+  },
+  "font": "Segoe UI",
+  "axis": {
+   "labelColor": "#A3AEC8",
+   "labelFontSize": 12,
+   "labelFont": "Segoe UI",
+   "title": null,
+   "domain": false,
+   "ticks": false,
+   "labelPadding": 6,
+   "gridColor": "#26314F",
+   "gridOpacity": 0.6
+  },
+  "axisX": {
+   "grid": false,
+   "labelAngle": 0
+  },
+  "legend": {
+   "disable": true
+  },
+  "text": {
+   "font": "Segoe UI",
+   "fontSize": 12,
+   "color": "#EEF2FB"
+  },
+  "padding": 4
+ },
+ "transform": [
+  {
+   "calculate": "datum['Valor']/datum['Meta']",
+   "as": "_r"
+  },
+  {
+   "calculate": "min(datum._r,1.2)",
+   "as": "_rc"
+  }
+ ],
+ "encoding": {
+  "y": {
+   "field": "Categoría",
+   "type": "nominal",
+   "sort": {
+    "field": "_r",
+    "op": "max",
+    "order": "descending"
+   },
+   "axis": {
+    "labelColor": "#C3CBDF",
+    "grid": false
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": 8,
+    "cornerRadius": 4,
+    "color": "#16304A"
+   },
+   "encoding": {
+    "x": {
+     "datum": 1.2,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1.2
+      ]
+     },
+     "axis": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "bar",
+    "height": 8,
+    "cornerRadius": 4
+   },
+   "encoding": {
+    "x": {
+     "field": "_rc",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1.2
+      ]
+     },
+     "axis": null
+    },
+    "color": {
+     "condition": {
+      "test": "datum._r >= 1",
+      "value": "#5CC8FF"
+     },
+     "value": "#6E7A96"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "tick",
+    "thickness": 2,
+    "size": 18,
+    "color": "#EEF2FB"
+   },
+   "encoding": {
+    "x": {
+     "datum": 1,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1.2
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 8,
+    "fontWeight": 600,
+    "color": "#EEF2FB"
+   },
+   "encoding": {
+    "x": {
+     "datum": 1.2,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1.2
+      ]
+     }
+    },
+    "text": {
+     "field": "_r",
+     "format": "0 %",
+     "formatType": "pbiFormat"
+    }
+   }
+  }
+ ]
+}
